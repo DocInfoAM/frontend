@@ -1,4 +1,4 @@
-import classes from "../styles/ChangeLanguages.module.css"
+import classes from "./ChangeLanguages.module.css"
 
 const ChangeLanguages = () => {
     return (

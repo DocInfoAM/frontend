@@ -1,6 +1,6 @@
-import Navigation from "./Navigation"
-import ChangeLanguages from "./ChangeLanguages"
-import classes from "../styles/Header.module.css"
+import Navigation from "./Navigation/Navigation"
+import ChangeLanguages from "./ChangeLanguages/ChangeLanguages"
+import classes from "./Header.module.css"
 
 const Header = () => {
     return (
