@@ -1,9 +1,13 @@
+import classes from "../styles/Navigation.module.css"
+
 const Navigation = () => {
     return (
-        <nav className="nav">
-          <div><a id="point1" className="point" href="##">Point 1</a></div>
-          <div><a id="point2" className="point" href="##">Point 2</a></div>
-          <div><a id="point3" className="point" href="##">Point 3</a></div>
+        <nav className={classes.nav}>
+          <a id="point1" href="##"><div className={classes.point}>Point 1</div></a>
+          <a id="point2" href="##"><div className={classes.point}>Point 2</div></a>
+          <a id="point3" href="##"><div className={classes.point}>Point 3</div></a>
+          <a id="point4" href="##"><div className={classes.point}>Point 4</div></a>
+          <a id="point5" href="##"><div className={classes.point}>Point 5</div></a>
         </nav>
     )
 }

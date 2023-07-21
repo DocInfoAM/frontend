@@ -1,10 +1,12 @@
+import classes from "../styles/ChangeLanguages.module.css"
+
 const ChangeLanguages = () => {
     return (
-        <div id="change-languages" className="change-languages">
+        <div className={classes.change_languages}>
           <p>
-            <span class="flag-icon flag-icon-arm"></span>
-            <span class="flag-icon flag-icon-rus"></span>
-            <span class="flag-icon flag-icon-gbr"></span>
+            <span className={classes.flag_icon + ' ' + classes.flag_icon_arm} id="arm"></span>
+            {/* <span className="flag_icon flag_icon_rus" id="rus"></span> */}
+            <span className={classes.flag_icon + ' ' + classes.flag_icon_gbr} id="gbr"></span>
           </p>
         </div>
     )

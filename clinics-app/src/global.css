@@ -1,0 +1,9 @@
+a {
+  color: rgb(30, 30, 30);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.app-wrapper {
+  padding: 10px;
+}
