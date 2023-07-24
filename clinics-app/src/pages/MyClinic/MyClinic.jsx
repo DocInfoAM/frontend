@@ -1,7 +1,7 @@
-import classes from './MyClinic.module.css'
+import classes from "./MyClinic.module.css";
 
 const MyClinic = () => {
-    return <p>My clinic page</p>
-}
+  return <p>My clinic page</p>;
+};
 
-export default MyClinic
+export default MyClinic;

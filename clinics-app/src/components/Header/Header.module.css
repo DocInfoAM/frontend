@@ -24,6 +24,7 @@
 }
 
 .div_header_img {
+    width: fit-content;
     grid-area: div-for-header-img;
     padding: 10px;
 }

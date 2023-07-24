@@ -1,6 +1,7 @@
 .change_languages {
     grid-area: change-languages;
     padding: 10px;
+    width: fit-content;
 }
 
 .flag_icon_background,

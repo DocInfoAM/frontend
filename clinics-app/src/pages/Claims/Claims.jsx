@@ -1,7 +1,7 @@
-import classes from './Claims.module.css'
+import classes from "./Claims.module.css";
 
 const Claims = () => {
-    return <p>Claims</p>
-}
+  return <p>Claims</p>;
+};
 
-export default Claims
+export default Claims;

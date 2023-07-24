@@ -1,7 +1,7 @@
-import classes from './AllDoctors.module.css'
+import classes from "./AllDoctors.module.css";
 
 const AllDoctors = () => {
-    return <p>All Doctors</p>
-}
+  return <p>All Doctors</p>;
+};
 
-export default AllDoctors
+export default AllDoctors;

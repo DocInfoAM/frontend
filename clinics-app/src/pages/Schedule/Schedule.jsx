@@ -1,7 +1,7 @@
-import classes from './Schedule.module.css'
+import classes from "./Schedule.module.css";
 
 const Schedule = () => {
-    return <p>Schedule</p>
-}
+  return <p>Schedule</p>;
+};
 
-export default Schedule
+export default Schedule;

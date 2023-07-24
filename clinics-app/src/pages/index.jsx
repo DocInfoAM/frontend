@@ -1,7 +1,7 @@
-import classes from './index.module.css'
+import classes from "./index.module.css";
 
 const mainScreen = () => {
-    return <p>index.jsx (Login screen)</p>
-}
+  return <p>index.jsx (Login screen)</p>;
+};
 
-export default mainScreen
+export default mainScreen;
