@@ -1,16 +1,16 @@
 import classes from "./Navigation.module.css";
-import Item from "./Item/Item"
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
     <nav className={classes.nav}>
-      <Item text="Моя клиника" id="item1" link="/myclinic" />
-      <Item text="Заявки" id="item2" link="/claims" />
-      <Item text="Расписание" id="item3" link="/schedule" />
-      <Item text="Личный кабинет врача" id="item4" link="/personalarea" />
-      <Item text="Все врачи" id="item5" link="/alldoctors" />
-      <Item text="Контакты" id="item6" link="/contacts" />
-      <Item text="Выход" id="item7" link="/signout" />
+      <Link to="/myclinic"><div className={classes.item}>Моя клиника</div></Link>
+      <Link to="/claims"><div className={classes.item}>Заявки</div></Link>
+      <Link to="/schedule"><div className={classes.item}>Расписание</div></Link>
+      <Link to="/personalarea"><div className={classes.item}>Личный кабинет врача</div></Link>
+      <Link to="/alldoctors"><div className={classes.item}>Все врачи</div></Link>
+      <Link to="/contacts"><div className={classes.item}>Контакты</div></Link>
+      <Link to="/signout"><div className={classes.item}>Выход</div></Link>
     </nav>
   );
 };
