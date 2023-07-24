@@ -4,8 +4,9 @@ import Item from "./Item/Item"
 const Navigation = () => {
   return (
     <nav className={classes.nav}>
-      <Item text="Моя клиника" id="item1" link="/" />
-      <Item text="Заявки" id="item2" link="/" />
+
+      <Item text="Моя клиника" id="item1" link="/myclinic" />
+      <Item text="Заявки" id="item2" link="/claims" />
       <Item text="Расписание" id="item3" link="/" />
       <Item text="Личный кабинет врача" id="item4" link="/" />
       <Item text="Все врачи" id="item5" link="/" />
