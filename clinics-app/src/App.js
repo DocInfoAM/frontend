@@ -8,7 +8,7 @@ import PersonalArea from "./pages/PersonalArea/PersonalArea";
 import AllDoctors from "./pages/AllDoctors/AllDoctors";
 import Contacts from "./pages/Contacts/Contacts";
 import SignOut from "./pages/SignOut/SignOut";
-import mainScreen from "./pages";
+import Index from "./pages";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Header />
         <div className="content">
           <Routes>
-            <Route path="/" Component={mainScreen} />
+            <Route path="/" Component={Index} />
             <Route path="/myclinic" Component={MyClinic} />
             <Route path="/claims" Component={Claims} />
             <Route path="/schedule" Component={Schedule} />
