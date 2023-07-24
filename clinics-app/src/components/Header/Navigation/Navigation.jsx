@@ -4,9 +4,13 @@ import Item from "./Item/Item"
 const Navigation = () => {
   return (
     <nav className={classes.nav}>
-      <Item text="Ссылка 1" id="item1" link="/" />
-      <Item text="Ссылка 2" id="item2" link="/" />
-      <Item text="Ссылка 3" id="item3" link="/" />
+      <Item text="Моя клиника" id="item1" link="/" />
+      <Item text="Заявки" id="item2" link="/" />
+      <Item text="Расписание" id="item3" link="/" />
+      <Item text="Личный кабинет врача" id="item4" link="/" />
+      <Item text="Все врачи" id="item5" link="/" />
+      <Item text="Контакты" id="item6" link="/" />
+      <Item text="Выход" id="item7" link="/" />
     </nav>
   );
 };
