@@ -9,6 +9,7 @@ import AllDoctors from "./pages/AllDoctors/AllDoctors";
 import Contacts from "./pages/Contacts/Contacts";
 import SignOut from "./pages/SignOut/SignOut";
 import Index from "./pages";
+import NotFoundPage from "./pages/404";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/alldoctors" Component={AllDoctors} />
             <Route path="/contacts" Component={Contacts} />
             <Route path="/signout" Component={SignOut} />
+            <Route path="*" Component={NotFoundPage} />
           </Routes>
         </div>
       </div>
