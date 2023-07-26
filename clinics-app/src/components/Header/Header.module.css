@@ -17,6 +17,7 @@
     left: 50%;
     transform: translateX(-50%);
     box-sizing: border-box;
+    background-color: #f2fefe;
 }
 
 .header > * {
