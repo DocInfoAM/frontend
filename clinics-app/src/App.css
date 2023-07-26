@@ -10,7 +10,7 @@ a {
 
 .content {
   max-width: 1280px;
-  width: 95%;
+  width: 95vw;
   margin: 120px auto;
   border: 1px solid #ecebeb;
   border-radius: 10px;
