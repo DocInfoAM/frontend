@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import classes from "./MyClinic.module.css";
 
 const MyClinic = () => {
   return (

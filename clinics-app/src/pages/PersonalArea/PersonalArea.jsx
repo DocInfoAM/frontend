@@ -1,4 +1,3 @@
-import classes from "./PersonalArea.module.css";
 
 const PersonalArea = () => {
   return (

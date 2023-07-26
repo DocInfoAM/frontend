@@ -1,4 +1,3 @@
-import classes from "./index.module.css";
 
 const index = () => {
   return (
