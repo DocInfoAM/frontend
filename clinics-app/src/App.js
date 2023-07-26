@@ -14,6 +14,9 @@ import Footer from "./components/Footer/Footer";
 import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
 import PasswordRecovery from "./pages/PasswordRecovery/PasswordRecovery";
 import EditSchedule from "./pages/EditSchedule/EditSchedule";
+import Statistics from './pages/Statistics/Statistics';
+import TopUpAccountBalance from "./pages/TopUpAccountBalance/TopUpAccountBalance";
+import AccountBalance from "./pages/AccountBalance/AccountBalance"
 
 function App() {
   return (
@@ -32,7 +35,10 @@ function App() {
             <Route path="/signout" Component={SignOut} />
             <Route path="/termsofuse" Component={TermsOfUse} />
             <Route path="/passwordrecovery" Component={PasswordRecovery} />
+            <Route path="/accountbalance" Component={AccountBalance} />
             <Route path="/editschedule" Component={EditSchedule} />
+            <Route path="/statistics" Component={Statistics} />
+            <Route path="/topupaccountbalance" Component={TopUpAccountBalance} />
             <Route path="*" Component={NotFoundPage} />
           </Routes>
         </div>
