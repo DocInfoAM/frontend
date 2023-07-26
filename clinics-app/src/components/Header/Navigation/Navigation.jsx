@@ -11,7 +11,7 @@ const Navigation = () => {
         <div className={classes.item}>Заявки</div>
       </Link>
       <Link to="/schedule" id="Schedule">
-        <div className={classes.item}>Расписание</div>
+        <div className={classes.item}>Расписание врача</div>
       </Link>
       <Link to="/personalarea" id="PersonalArea">
         <div className={classes.item}>Личный кабинет врача</div>

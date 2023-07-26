@@ -1,7 +1,11 @@
 import classes from "./PersonalArea.module.css";
 
 const PersonalArea = () => {
-  return <p>Personal Area</p>;
+  return (
+    <div>
+      <p>Personal Area</p>
+    </div>
+  );
 };
 
 export default PersonalArea;

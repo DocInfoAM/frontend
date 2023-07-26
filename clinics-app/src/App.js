@@ -10,6 +10,10 @@ import Contacts from "./pages/Contacts/Contacts";
 import SignOut from "./pages/SignOut/SignOut";
 import Index from "./pages";
 import NotFoundPage from "./pages/404";
+import Footer from "./components/Footer/Footer";
+import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
+import PasswordRecovery from "./pages/PasswordRecovery/PasswordRecovery";
+import EditSchedule from "./pages/EditSchedule/EditSchedule";
 
 function App() {
   return (
@@ -26,9 +30,13 @@ function App() {
             <Route path="/alldoctors" Component={AllDoctors} />
             <Route path="/contacts" Component={Contacts} />
             <Route path="/signout" Component={SignOut} />
+            <Route path="/termsofuse" Component={TermsOfUse} />
+            <Route path="/passwordrecovery" Component={PasswordRecovery} />
+            <Route path="/editschedule" Component={EditSchedule} />
             <Route path="*" Component={NotFoundPage} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );
