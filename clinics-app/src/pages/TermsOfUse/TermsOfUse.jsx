@@ -1,6 +1,6 @@
 
 const TermsOfUse = () => {
-  return <p>Terms Of Use page</p>;
+  return <h2>Terms Of Use page</h2>;
 };
 
 export default TermsOfUse;

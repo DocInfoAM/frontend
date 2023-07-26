@@ -2,7 +2,7 @@
 const PersonalArea = () => {
   return (
     <div>
-      <p>Personal Area</p>
+      <h2>Personal Area</h2>
     </div>
   );
 };

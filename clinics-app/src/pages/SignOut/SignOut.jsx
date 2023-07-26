@@ -1,6 +1,6 @@
 
 const SignOut = () => {
-  return <p>Sign Out and redirect to ./index.jsx</p>;
+  return <h2>Sign Out and redirect to ./index.jsx</h2>;
 };
 
 export default SignOut;

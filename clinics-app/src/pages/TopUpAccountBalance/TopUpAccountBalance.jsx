@@ -3,7 +3,7 @@
 const TopUpAccountBalance = () => {
   return (
     <div>
-      <p>Top Up Account Balance page</p>
+      <h2>Top Up Account Balance page</h2>
     </div>
   );
 };

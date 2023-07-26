@@ -1,6 +1,6 @@
 
 const EditSchedule = () => {
-  return <p>Edit Schedule page</p>;
+  return <h2>Edit Schedule page</h2>;
 };
 
 export default EditSchedule;

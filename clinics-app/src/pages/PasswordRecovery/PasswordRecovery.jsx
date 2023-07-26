@@ -1,6 +1,6 @@
 
 const PasswordRecovery = () => {
-  return <p>Password Recovery page</p>;
+  return <h2>Password Recovery page</h2>;
 };
 
 export default PasswordRecovery;

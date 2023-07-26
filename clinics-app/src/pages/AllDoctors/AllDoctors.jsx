@@ -1,6 +1,6 @@
 
 const AllDoctors = () => {
-  return <p>All Doctors</p>;
+  return <h2>All Doctors</h2>;
 };
 
 export default AllDoctors;
