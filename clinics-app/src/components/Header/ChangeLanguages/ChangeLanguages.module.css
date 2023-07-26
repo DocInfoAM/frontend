@@ -1,0 +1,46 @@
+.change_languages {
+    grid-area: change-languages;
+    padding: 10px;
+    width: fit-content;
+}
+
+.flag_icon_background,
+.flag_icon {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border: 1px solid #d6d6d6;
+}
+
+.flag_icon {
+    position: relative;
+    display: inline-block;
+    width: 1.3333333333em;
+    line-height: 1em;
+    filter: grayscale(20%);
+    margin: 5px;
+}
+
+.flag_icon:before {
+    content: ' ';
+}
+
+.flag_icon .flag_icon_squared {
+    width: 1em;
+}
+
+.flag_icon_arm {
+    background-image: url(./flags/4x3/arm.svg);
+}
+
+.flag_icon_gbr {
+    background-image: url(./flags/4x3/gbr.svg);
+}
+
+.flag_icon_rus {
+    background-image: url(./flags/4x3/rus.svg);
+}
+
+.flag_icon_usa {
+    background-image: url(./flags/4x3/usa.svg);
+}
