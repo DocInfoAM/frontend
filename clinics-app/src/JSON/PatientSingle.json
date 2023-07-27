@@ -1,0 +1,11 @@
+{
+    "id": "number",
+    "email": "string",
+    "login": "string",
+    "password": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "lastName": "string",
+    "photoURL": "string",
+    "phoneNumber": "string"
+}
