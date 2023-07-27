@@ -1,30 +1,30 @@
 import classes from "./Navigation.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
   return (
     <nav className={classes.nav}>
-      <Link to="/my-clinic" id="MyClinic">
+      <NavLink to="/my-clinic" id="MyClinic" className={({ isActive }) => (isActive ? classes.active : "")}>
         <div className={classes.item}>Моя клиника</div>
-      </Link>
-      <Link to="/claims" id="Claims">
+      </NavLink>
+      <NavLink to="/claims" id="Claims" className={({ isActive }) => (isActive ? classes.active : "")}>
         <div className={classes.item}>Заявки</div>
-      </Link>
-      <Link to="/schedule" id="Schedule">
+      </NavLink>
+      <NavLink to="/schedule" id="Schedule" className={({ isActive }) => (isActive ? classes.active : "")}>
         <div className={classes.item}>Расписание врача</div>
-      </Link>
-      <Link to="/personal-area" id="PersonalArea">
+      </NavLink>
+      <NavLink to="/personal-area" id="PersonalArea" className={({ isActive }) => (isActive ? classes.active : "")}>
         <div className={classes.item}>Личный кабинет врача</div>
-      </Link>
-      <Link to="/all-doctors" id="AllDoctors">
+      </NavLink>
+      <NavLink to="/all-doctors" id="AllDoctors" className={({ isActive }) => (isActive ? classes.active : "")}>
         <div className={classes.item}>Все врачи</div>
-      </Link>
-      <Link to="/contacts" id="Contacts">
+      </NavLink>
+      <NavLink to="/contacts" id="Contacts" className={({ isActive }) => (isActive ? classes.active : "")}>
         <div className={classes.item}>Контакты</div>
-      </Link>
-      <Link to="/sign-out" id="SignOut">
+      </NavLink>
+      <NavLink to="/sign-out" id="SignOut" className={({ isActive }) => (isActive ? classes.active : "")}>
         <div className={classes.item}>Выход</div>
-      </Link>
+      </NavLink>
     </nav>
   );
 };
