@@ -5,7 +5,7 @@ const MyClinic = () => {
     <div>
       <h2>My clinic page</h2>
       <p><Link to="/statistics">Статистика по клинике</Link></p>
-      <p><Link to="/accountbalance">Баланс клиники</Link></p>
+      <p><Link to="/account-balance">Баланс клиники</Link></p>
     </div>
   );
 };

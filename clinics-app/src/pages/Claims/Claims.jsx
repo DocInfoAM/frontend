@@ -4,8 +4,8 @@ const Claims = () => {
   return (
     <div>
       <h2>Claims</h2>
-      <p><Link to="/alldoctors">Список врачей</Link></p>
-      <p><Link to="/myclinic">Страница моей клиники</Link></p>
+      <p><Link to="/all-doctors">Список врачей</Link></p>
+      <p><Link to="/my-clinic">Страница моей клиники</Link></p>
     </div>
   );
 };

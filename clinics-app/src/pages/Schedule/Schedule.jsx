@@ -4,9 +4,9 @@ const Schedule = () => {
   return (
     <div>
       <h2>Schedule</h2>
-      <p><Link to="/editschedule">Редактировать моё расписание</Link></p>
-      <p><Link to="/personalarea">Личный кабинет врача</Link></p>
-      <p><Link to="/alldoctors">Список врачей</Link></p>
+      <p><Link to="/edit-schedule">Редактировать моё расписание</Link></p>
+      <p><Link to="/personal-area">Личный кабинет врача</Link></p>
+      <p><Link to="/all-doctors">Список врачей</Link></p>
     </div>
   );
 };

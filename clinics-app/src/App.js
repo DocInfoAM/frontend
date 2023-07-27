@@ -26,19 +26,19 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" Component={Index} />
-            <Route path="/myclinic" Component={MyClinic} />
+            <Route path="/my-clinic" Component={MyClinic} />
             <Route path="/claims" Component={Claims} />
             <Route path="/schedule" Component={Schedule} />
-            <Route path="/personalarea" Component={PersonalArea} />
-            <Route path="/alldoctors" Component={AllDoctors} />
+            <Route path="/personal-area" Component={PersonalArea} />
+            <Route path="/all-doctors" Component={AllDoctors} />
             <Route path="/contacts" Component={Contacts} />
-            <Route path="/signout" Component={SignOut} />
-            <Route path="/termsofuse" Component={TermsOfUse} />
-            <Route path="/passwordrecovery" Component={PasswordRecovery} />
-            <Route path="/accountbalance" Component={AccountBalance} />
-            <Route path="/editschedule" Component={EditSchedule} />
+            <Route path="/sign-out" Component={SignOut} />
+            <Route path="/terms-of-use" Component={TermsOfUse} />
+            <Route path="/password-recovery" Component={PasswordRecovery} />
+            <Route path="/account-balance" Component={AccountBalance} />
+            <Route path="/edit-schedule" Component={EditSchedule} />
             <Route path="/statistics" Component={Statistics} />
-            <Route path="/topupaccountbalance" Component={TopUpAccountBalance} />
+            <Route path="/top-up-account-balance" Component={TopUpAccountBalance} />
             <Route path="*" Component={NotFoundPage} />
           </Routes>
         </div>

@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
   return (
     <nav className={classes.nav}>
-      <Link to="/termsofuse" id="TermsOfUse">
+      <Link to="/terms-of-use" id="TermsOfUse">
         <div className={classes.item}>Пользовательское соглашение</div>
       </Link>
-      <Link to="/passwordrecovery" id="PasswordRecovery">
+      <Link to="/password-recovery" id="PasswordRecovery">
         <div className={classes.item}>Восстановление доступа</div>
       </Link>
     </nav>

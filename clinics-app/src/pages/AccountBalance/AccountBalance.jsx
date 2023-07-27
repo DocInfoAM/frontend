@@ -4,7 +4,7 @@ const AccountBalance = () => {
   return (
     <div>
       <h2>Account Balance page</h2>
-      <p><Link to="/topupaccountbalance">Пополнить баланс клиники</Link></p>
+      <p><Link to="/top-up-account-balance">Пополнить баланс клиники</Link></p>
     </div>
   );
 };
