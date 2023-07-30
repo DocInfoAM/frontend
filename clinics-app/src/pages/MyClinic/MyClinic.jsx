@@ -12,6 +12,24 @@ const MyClinic = () => {
       </p>
       <br />
       <br />
+      <p>
+        GET - информация о клинике, должны предать id клиники, на что получить объект с полями 1. url фото 2. название
+        клиники 3. профиль (специализация, направление) 4. рейтинг 5. адрес 6. номера телефонов 7. соцсети 8.
+        минимальная стоимость приёма 9. услуги и их стоимость 10. теги со специализациями 11. допинфо текстовое поле.
+      </p>
+      <ul>
+        <li>urlPhoto: string</li>
+        <li>clinicName: string</li>
+        <li>clinicSpecialisation: string</li>
+        <li>clinicRate: number</li>
+        <li>clinicAddress: (textAddress: string, coordinates: string)</li>
+        <li>clinicPhones: ["string", "string", "string"]</li>
+        <li>clinicSocialNetworks: ["string", "string", "string"]</li>
+        <li>minimalPrice: number</li>
+        <li>clinicServices: [ {`{ service : string, price : number }`}, {`{ service : string, price : number }`} ]</li>
+        <li>clinicTags: ["string", "string", "string"]</li>
+        <li>clinicInformation: string</li>
+      </ul>
       <h2>Логика</h2>
       <p>Проверяем залогирован ли пользователь (по данным из браузера):</p>
       <p>

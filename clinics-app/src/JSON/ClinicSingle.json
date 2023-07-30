@@ -1,5 +1,6 @@
 {
     "id": "number",
+    "urlPhoto": "string",
     "email": "string",
     "login": "string",
     "password": "string",
