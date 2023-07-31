@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const MyClinic = () => {
   return (
     <div>
       <h2>My clinic page</h2>
+      <h3>Тестовый GET запрос ниже</h3>
+      <div style={{ width: 400 + "px", border: 1 + "px solid #aaa", borderRadius: 30 + "px", margin: "0 auto" }}>
+        <p>Здесь будет ответ с сервера</p>
+      </div>
+      <br />
+      <br />
+      <h3>Ссылки</h3>
       <p>
         <Link to="/statistics">Статистика по клинике</Link>
       </p>
@@ -12,6 +20,7 @@ const MyClinic = () => {
       </p>
       <br />
       <br />
+      <h3>Заметки</h3>
       <p>
         GET - информация о клинике, должны предать id клиники, на что получить объект с полями 1. url фото 2. название
         клиники 3. профиль (специализация, направление) 4. рейтинг 5. адрес 6. номера телефонов 7. соцсети 8.
@@ -26,11 +35,13 @@ const MyClinic = () => {
         <li>clinicPhones: ["string", "string", "string"]</li>
         <li>clinicSocialNetworks: ["string", "string", "string"]</li>
         <li>minimalPrice: number</li>
-        <li>clinicServices: [ {`{ service : string, price : number }`}, {`{ service : string, price : number }`} ]</li>
+        <li>
+          clinicServices: [ {`{ service : string, price : number }`}, {`{ service : string, price : number }`} ]
+        </li>
         <li>clinicTags: ["string", "string", "string"]</li>
         <li>clinicInformation: string</li>
       </ul>
-      <h2>Логика</h2>
+      <h3>Логика</h3>
       <p>Проверяем залогирован ли пользователь (по данным из браузера):</p>
       <p>
         Если <strong>"НЕТ"</strong> - перенаправляем на index.jsx (Страницу логина)
