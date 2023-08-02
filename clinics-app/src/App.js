@@ -1,22 +1,22 @@
 import "./App.css";
 import Header from "./components/Header/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MyClinic from "./pages/MyClinic/MyClinic";
-import Claims from "./pages/Claims/Claims";
-import Schedule from "./pages/Schedule/Schedule";
-import PersonalArea from "./pages/PersonalArea/PersonalArea";
-import AllDoctors from "./pages/AllDoctors/AllDoctors";
-import Contacts from "./pages/Contacts/Contacts";
-import SignOut from "./pages/SignOut/SignOut";
-import Index from "./pages";
-import NotFoundPage from "./pages/404";
+import MyClinic from "./components/Pages/MyClinic/MyClinic";
+import Claims from "./components/Pages/Claims/Claims";
+import Schedule from "./components/Pages/Schedule/Schedule";
+import PersonalArea from "./components/Pages/PersonalArea/PersonalArea";
+import AllDoctors from "./components/Pages/AllDoctors/AllDoctors";
+import Contacts from "./components/Pages/Contacts/Contacts";
+import SignOut from "./components/Pages/SignOut/SignOut";
+import Index from "./components/Pages";
+import NotFoundPage from "./components/Pages/404";
 import Footer from "./components/Footer/Footer";
-import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
-import PasswordRecovery from "./pages/PasswordRecovery/PasswordRecovery";
-import EditSchedule from "./pages/EditSchedule/EditSchedule";
-import Statistics from './pages/Statistics/Statistics';
-import TopUpAccountBalance from "./pages/TopUpAccountBalance/TopUpAccountBalance";
-import AccountBalance from "./pages/AccountBalance/AccountBalance"
+import TermsOfUse from "./components/Pages/TermsOfUse/TermsOfUse";
+import PasswordRecovery from "./components/Pages/PasswordRecovery/PasswordRecovery";
+import EditSchedule from "./components/Pages/EditSchedule/EditSchedule";
+import Statistics from "./components/Pages/Statistics/Statistics";
+import TopUpAccountBalance from "./components/Pages/TopUpAccountBalance/TopUpAccountBalance";
+import AccountBalance from "./components/Pages/AccountBalance/AccountBalance";
 
 function App() {
   return (
@@ -25,21 +25,21 @@ function App() {
         <Header />
         <div className="content">
           <Routes>
-            <Route path="/" Component={Index} />
-            <Route path="/my-clinic" Component={MyClinic} />
-            <Route path="/claims" Component={Claims} />
-            <Route path="/schedule" Component={Schedule} />
-            <Route path="/personal-area" Component={PersonalArea} />
-            <Route path="/all-doctors" Component={AllDoctors} />
-            <Route path="/contacts" Component={Contacts} />
-            <Route path="/sign-out" Component={SignOut} />
-            <Route path="/terms-of-use" Component={TermsOfUse} />
-            <Route path="/password-recovery" Component={PasswordRecovery} />
-            <Route path="/account-balance" Component={AccountBalance} />
-            <Route path="/edit-schedule" Component={EditSchedule} />
-            <Route path="/statistics" Component={Statistics} />
-            <Route path="/top-up-account-balance" Component={TopUpAccountBalance} />
-            <Route path="*" Component={NotFoundPage} />
+            <Route exact path="/" element={<Index />} />
+            <Route path="/my-clinic" element={<MyClinic />} />
+            <Route path="/claims" element={<Claims />} />
+            <Route path="/schedule" element={<Schedule />} />
+            <Route path="/personal-area" element={<PersonalArea />} />
+            <Route path="/all-doctors" element={<AllDoctors />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/sign-out" element={<SignOut />} />
+            <Route path="/terms-of-use" element={<TermsOfUse />} />
+            <Route path="/password-recovery" element={<PasswordRecovery />} />
+            <Route path="/account-balance" element={<AccountBalance />} />
+            <Route path="/edit-schedule" element={<EditSchedule />} />
+            <Route path="/statistics" element={<Statistics />} />
+            <Route path="/top-up-account-balance" element={<TopUpAccountBalance />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
         <Footer />

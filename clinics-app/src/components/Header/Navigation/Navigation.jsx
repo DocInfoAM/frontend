@@ -13,7 +13,7 @@ const navItems = [
 
 const NavItem = () => {
   return navItems.map((data) => (
-    <NavLink to={data.url} id={data.id} className={setActive}>
+    <NavLink to={data.url} id={data.id} className={setActive} key={data.id}>
       <div className={classes.item}>{data.name}</div>
     </NavLink>
   ));

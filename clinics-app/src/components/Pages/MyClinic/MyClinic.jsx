@@ -1,13 +1,25 @@
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+const JSON = [{ id: 0, photoURL: "photo url", clinicTitle: "clinic title", clinicPhone: "+37400000000" }];
+
+const TestJSON = (props) => {
+  return (
+    <div>
+      <p>{JSON[0].photoURL}</p>
+      <p>{JSON[0].clinicTitle}</p>
+      <p>{JSON[0].clinicPhone}</p>
+    </div>
+  );
+};
+
 const MyClinic = () => {
   return (
     <div>
       <h2>My clinic page</h2>
       <h3>Тестовый GET запрос ниже</h3>
       <div style={{ width: 400 + "px", border: 1 + "px solid #aaa", borderRadius: 30 + "px", margin: "0 auto" }}>
-        <p>Здесь будет ответ с сервера</p>
+        <TestJSON />
       </div>
       <br />
       <br />
