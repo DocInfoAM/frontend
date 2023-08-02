@@ -18,11 +18,11 @@ import Statistics from "./components/Pages/Statistics/Statistics";
 import TopUpAccountBalance from "./components/Pages/TopUpAccountBalance/TopUpAccountBalance";
 import AccountBalance from "./components/Pages/AccountBalance/AccountBalance";
 
-function App() {
+function App({ navItems }) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Header />
+        <Header navItems={navItems} />
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Index />} />
