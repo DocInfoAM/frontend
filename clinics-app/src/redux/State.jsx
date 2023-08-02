@@ -12,17 +12,29 @@ let state = {
   },
   myClinicPage: {
     JSONForMyClinics: [
-      { id: 0, photoURL: "photo url", clinicTitle: "clinic title", clinicPhone: "+37400000000" },
-      { id: 2, photoURL: "text", clinicTitle: "clinic text", clinicPhone: "+3743333" },
+      {
+        id: 0,
+        photoURL: "https://farkop.ru/no_photo.jpeg",
+        clinicTitle: "Super clinic",
+        clinicPhone: "+37400000020",
+        description: "Some description about that clinic",
+      },
+      {
+        id: 1,
+        photoURL: "https://farkop.ru/no_photo.jpeg",
+        clinicTitle: "Second clinic",
+        clinicPhone: "+37444080404",
+        description: "Other description, this is second clinic",
+      },
     ],
   },
 };
 
-export const addClinic = (phone) => {
+export const addClinic = (title, photoURL, phone) => {
   state.myClinicPage.JSONForMyClinics.push({
-    id: 1,
-    photoURL: "photo url 2",
-    clinicTitle: "clinic title 2",
+    id: state.myClinicPage.JSONForMyClinics.length,
+    photoURL: photoURL,
+    clinicTitle: title,
     clinicPhone: phone,
   });
   console.log(state);

@@ -1,0 +1,14 @@
+.get_data_block {
+    margin-bottom: 150px;
+}
+
+.data_block {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
