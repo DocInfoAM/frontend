@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const navItems = [
+let navItems = [
   { name: "Моя клиника", url: "/my-clinic", id: "MyClinic" },
   { name: "Заявки", url: "/claims", id: "Claims" },
   { name: "Расписание врача", url: "/schedule", id: "Schedule" },
@@ -14,14 +14,14 @@ const navItems = [
   { name: "Выход", url: "/sign-out", id: "SignOut" },
 ];
 
+let JSONForMyClinics = [{ id: 0, photoURL: "photo url", clinicTitle: "clinic title", clinicPhone: "+37400000000" }];
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App navItems={navItems} />
+    <App navItems={navItems} JSONForMyClinics={JSONForMyClinics} />
   </React.StrictMode>
 );
-
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
