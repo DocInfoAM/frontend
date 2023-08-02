@@ -1,23 +1,40 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const TestJSON = ({ JSONForMyClinics }) => {
+const AddTestJSON = (props) => {
+  return props.JSONForMyClinics.map((x) => {
+    return <p key={x.id} id={x.id}>Получаем данные из index.js с помощью .map <br />- {x.clinicPhone}</p>;
+  });
+};
+
+const TestJSON = (props) => {
   return (
     <div>
-      <p>{JSONForMyClinics[0].photoURL}</p>
-      <p>{JSONForMyClinics[0].clinicTitle}</p>
-      <p>{JSONForMyClinics[0].clinicPhone}</p>
+      <AddTestJSON JSONForMyClinics={props.JSONForMyClinics} />
     </div>
   );
 };
 
-const MyClinic = ({ JSONForMyClinics }) => {
+const MyClinic = (props) => {
+  let addNewElement = React.createRef();
+
+  const addElement = () => {
+    let text = addNewElement.current.value;
+    props.addClinic(text);
+  };
+
   return (
     <div>
       <h2>My clinic page</h2>
       <h3>Тестовый GET запрос ниже</h3>
       <div style={{ width: 400 + "px", border: 1 + "px solid #aaa", borderRadius: 30 + "px", margin: "0 auto" }}>
-        <TestJSON JSONForMyClinics={JSONForMyClinics} />
+        <TestJSON JSONForMyClinics={props.JSONForMyClinics} />
+        <textarea ref={addNewElement}></textarea>
+        <br />
+        <button onClick={addElement}>Отправляем данные в index.js</button>
+        <br />
+        <br />
       </div>
       <br />
       <br />

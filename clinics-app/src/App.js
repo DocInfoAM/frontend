@@ -18,15 +18,20 @@ import Statistics from "./components/Pages/Statistics/Statistics";
 import TopUpAccountBalance from "./components/Pages/TopUpAccountBalance/TopUpAccountBalance";
 import AccountBalance from "./components/Pages/AccountBalance/AccountBalance";
 
-function App({ navItems, JSONForMyClinics }) {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Header navItems={navItems} />
+        <Header navItems={props.state.globalData.navItems} />
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Index />} />
-            <Route path="/my-clinic" element={<MyClinic JSONForMyClinics={JSONForMyClinics} />} />
+            <Route
+              path="/my-clinic"
+              element={
+                <MyClinic JSONForMyClinics={props.state.myClinicPage.JSONForMyClinics} addClinic={props.addClinic} />
+              }
+            />
             <Route path="/claims" element={<Claims />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/personal-area" element={<PersonalArea />} />
