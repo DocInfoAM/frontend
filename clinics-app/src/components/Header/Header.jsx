@@ -2,7 +2,7 @@ import Navigation from "./Navigation/Navigation";
 import ChangeLanguages from "./ChangeLanguages/ChangeLanguages";
 import classes from "./Header.module.css";
 
-const Header = ({ navItems }) => {
+const Header = () => {
   return (
     <header className={classes.header}>
       <div className={classes.div_header_img}>
@@ -14,7 +14,7 @@ const Header = ({ navItems }) => {
           src="./img/patient-clipart-patient-identification-19.png"
         />
       </div>
-      <Navigation navItems={navItems} />
+      <Navigation />
       <ChangeLanguages />
     </header>
   );

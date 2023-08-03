@@ -22,7 +22,7 @@ function App(props) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Header navItems={props.state.globalData.navItems} />
+        <Header />
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Index />} />

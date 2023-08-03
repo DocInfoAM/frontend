@@ -1,15 +1,4 @@
-let state = {
-  globalData: {
-    navItems: [
-      { name: "Моя клиника", url: "/my-clinic", id: "MyClinic" },
-      { name: "Заявки", url: "/claims", id: "Claims" },
-      { name: "Расписание врача", url: "/schedule", id: "Schedule" },
-      { name: "Личный кабинет врача", url: "/personal-area", id: "PersonalArea" },
-      { name: "Все врачи", url: "/all-doctors", id: "AllDoctors" },
-      { name: "Контакты", url: "/contacts", id: "Contacts" },
-      { name: "Выход", url: "/sign-out", id: "SignOut" },
-    ],
-  },
+const state = {
   myClinicPage: {
     JSONForMyClinics: [
       {
@@ -25,6 +14,13 @@ let state = {
         clinicTitle: "Second clinic",
         clinicPhone: "+37444080404",
         description: "Other description, this is second clinic",
+      },
+      {
+        id: 2,
+        photoURL: "https://farkop.ru/no_photo.jpeg",
+        clinicTitle: "Third clinic",
+        clinicPhone: "+37444060375",
+        description: "Other description, this is third clinic",
       },
     ],
   },

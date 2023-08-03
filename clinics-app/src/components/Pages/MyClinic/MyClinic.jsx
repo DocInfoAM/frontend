@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import classes from "./MyClinic.module.css";
 import GetData from "./components/GetData/GetData";
 import AddData from "./components/AddData/AddData";
-import axios from "axios";
 
 const MyClinic = (props) => {
   const addTitle = React.createRef(); // создаём реф для того, что бы забрать данные из текстового поля
@@ -21,10 +20,8 @@ const MyClinic = (props) => {
     <div>
       <h2>My clinic page</h2>
       <h3>Тестовый GET запрос будет ниже</h3>
-      <div className={classes.test_block}>
-        {/* привязываем поле для того, что бы забрать данные из него */}
-        <GetData JSONForMyClinics={props.JSONForMyClinics} />
-      </div>
+      {/* привязываем поле для того, что бы забрать данные из него */}
+      <GetData JSONForMyClinics={props.JSONForMyClinics} />
       <AddData addTitle={addTitle} addPhotoURL={addPhotoURL} addPhone={addPhone} addElement={addElement} />
       <br />
       <br />
