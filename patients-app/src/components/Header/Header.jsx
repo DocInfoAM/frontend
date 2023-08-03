@@ -1,7 +1,12 @@
 import classes from "./Header.module.css"
+import Navigation from "./Navigation/Navigation"
 
 const Header = () => {
-    <header className={classes.Header}>
-        prikol
-    </header>
+    return (
+        <header className={classes.header}>
+        <Navigation/>
+        </header>   
+    )
 }
+
+export default Header;
