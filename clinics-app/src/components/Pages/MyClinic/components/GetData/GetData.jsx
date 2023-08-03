@@ -1,7 +1,7 @@
 import classes from "./GetData.module.css";
 
 const getData = (props) => {
-  const id = 1;
+  const id = 2;
   const clinic = props.JSONForMyClinics[id];
 
   return (

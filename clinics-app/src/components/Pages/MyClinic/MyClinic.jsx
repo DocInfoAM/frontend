@@ -5,24 +5,13 @@ import GetData from "./components/GetData/GetData";
 import AddData from "./components/AddData/AddData";
 
 const MyClinic = (props) => {
-  const addTitle = React.createRef(); // создаём реф для того, что бы забрать данные из текстового поля
-  const addPhotoURL = React.createRef();
-  const addPhone = React.createRef();
-
-  const addElement = () => {
-    const title = addTitle.current.value; // забираем значение из поля
-    const photoURL = addPhotoURL.current.value; // забираем значение из поля
-    const phone = addPhone.current.value; // забираем значение из поля
-    props.addClinic(title, photoURL, phone); // вызываем функцию из пропсов для обработки данных
-  };
-
   return (
     <div>
       <h2>My clinic page</h2>
       <h3>Тестовый GET запрос будет ниже</h3>
       {/* привязываем поле для того, что бы забрать данные из него */}
       <GetData JSONForMyClinics={props.JSONForMyClinics} />
-      <AddData addTitle={addTitle} addPhotoURL={addPhotoURL} addPhone={addPhone} addElement={addElement} />
+      <AddData addClinic={props.addClinic} />
       <br />
       <br />
       <div>

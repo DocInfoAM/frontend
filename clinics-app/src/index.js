@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import state from "./redux/State";
-import { addClinic } from "./redux/State";
+import addClinic from "./redux/AddClinic";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
