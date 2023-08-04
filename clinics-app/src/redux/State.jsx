@@ -1,4 +1,4 @@
-export const id = 2;
+export const id = 1;
 
 export const state = {
   myClinicPage: {

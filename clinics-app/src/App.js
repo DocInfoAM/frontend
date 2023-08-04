@@ -18,7 +18,7 @@ import Statistics from "./components/Pages/Statistics/Statistics";
 import TopUpAccountBalance from "./components/Pages/TopUpAccountBalance/TopUpAccountBalance";
 import AccountBalance from "./components/Pages/AccountBalance/AccountBalance";
 
-function App({state, id, addClinicData}) {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -30,9 +30,9 @@ function App({state, id, addClinicData}) {
               path="/my-clinic"
               element={
                 <MyClinic
-                  id={id}
-                  JSONForMyClinics={state.myClinicPage.JSONForMyClinics}
-                  addClinicData={addClinicData}
+                  id={props.id}
+                  JSONForMyClinics={props.state.myClinicPage.JSONForMyClinics}
+                  addClinicData={props.addClinicData}
                 />
               }
             />
