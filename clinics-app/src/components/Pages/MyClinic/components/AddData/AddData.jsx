@@ -10,6 +10,9 @@ const addElement = (addClinicData) => {
   const description = addDescription.current.value;
   const phone = addPhone.current.value;
   addClinicData(title, phone, description); // вызываем функцию которую передали для обработки данных
+  addTitle.current.value = "";
+  addDescription.current.value = "";
+  addPhone.current.value = "";
 };
 
 const AddData = (props) => {
