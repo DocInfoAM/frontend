@@ -1,14 +1,15 @@
+import { rerenderEntireTree } from "../render";
 import { state, id } from "./State";
+import addClinicData from "./AddClinicData";
 
 const AddClinicData = (title, phone, description) => {
+  const lines = state.myClinicPage.JSONForMyClinics[id];
 
-  const lines = state.myClinicPage.JSONForMyClinics[id]
+  lines.clinicTitle = title;
+  lines.clinicPhone = phone;
+  lines.description = description;
 
-  lines.clinicTitle = title
-  lines.clinicPhone = phone
-  lines.description = description
-  
-  console.log(state);
+  rerenderEntireTree({ state, id, addClinicData });
 };
 
 export default AddClinicData;
