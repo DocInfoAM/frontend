@@ -1,19 +1,22 @@
 .data_block {
-    width: 80%;
-    margin: 0 auto;
-    text-align: left;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .info {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .test_block {
-    width: 60vw;
-    border: 1px solid #aaa;
-    border-radius: 30px;
-    margin: 0 auto;
-    padding: 10px;
-  }
-  
+  width: 60vw;
+  border: 1px solid #aaa;
+  border-radius: 30px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.img {
+  width: 150px;
+}

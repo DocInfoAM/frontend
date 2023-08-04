@@ -29,7 +29,7 @@ function App(props) {
             <Route
               path="/my-clinic"
               element={
-                <MyClinic JSONForMyClinics={props.state.myClinicPage.JSONForMyClinics} addClinic={props.addClinic} />
+                <MyClinic id={props.id} JSONForMyClinics={props.state.myClinicPage.JSONForMyClinics} addClinicData={props.addClinicData} />
               }
             />
             <Route path="/claims" element={<Claims />} />

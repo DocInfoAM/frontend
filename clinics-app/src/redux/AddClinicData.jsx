@@ -1,6 +1,6 @@
-import state from "./State";
+import { state } from "./State";
 
-const AddClinic = (title, photoURL, phone) => {
+const AddClinicData = (title, photoURL, phone) => {
   state.myClinicPage.JSONForMyClinics.push({
     id: state.myClinicPage.JSONForMyClinics.length,
     photoURL: photoURL,
@@ -10,4 +10,4 @@ const AddClinic = (title, photoURL, phone) => {
   console.log(state)
 };
 
-export default AddClinic
+export default AddClinicData

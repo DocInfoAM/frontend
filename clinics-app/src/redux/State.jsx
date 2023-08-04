@@ -1,4 +1,6 @@
-const state = {
+export const id = 1;
+
+export const state = {
   myClinicPage: {
     JSONForMyClinics: [
       {
@@ -25,5 +27,3 @@ const state = {
     ],
   },
 };
-
-export default state;

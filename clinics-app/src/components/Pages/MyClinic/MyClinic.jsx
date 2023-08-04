@@ -10,8 +10,8 @@ const MyClinic = (props) => {
       <h2>My clinic page</h2>
       <h3>Тестовый GET запрос будет ниже</h3>
       {/* привязываем поле для того, что бы забрать данные из него */}
-      <GetData JSONForMyClinics={props.JSONForMyClinics} />
-      <AddData addClinic={props.addClinic} />
+      <GetData JSONForMyClinics={props.JSONForMyClinics} id={props.id} />
+      <AddData addClinicData={props.addClinicData} />
       <br />
       <br />
       <div>

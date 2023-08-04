@@ -5,11 +5,11 @@ const addTitle = React.createRef(); // создаём реф для того, ч
 const addPhotoURL = React.createRef();
 const addPhone = React.createRef();
 
-const addElement = (addClinic) => {
+const addElement = (addClinicData) => {
   const title = addTitle.current.value; // забираем значение из поля
   const photoURL = addPhotoURL.current.value; 
   const phone = addPhone.current.value; 
-  addClinic(title, photoURL, phone); // вызываем функцию из пропсов для обработки данных
+  addClinicData(title, photoURL, phone); // вызываем функцию из пропсов для обработки данных
 };
 
 const AddData = (props) => {
@@ -34,7 +34,7 @@ const AddData = (props) => {
         </label>
       </p>
       {/* привязываем функцию для захвата данных на онклик и передаём параметром нашу пропсовую функцию */}
-      <button onClick={() => addElement(props.addClinic)} >
+      <button onClick={() => addElement(props.addClinicData)} >
         Нажатием сюда мы добавим данные про клинику в переменную в index.js, но пока что не можем отрисовать их
       </button>
     </>

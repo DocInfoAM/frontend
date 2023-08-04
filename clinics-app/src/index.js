@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import state from "./redux/State";
-import addClinic from "./redux/AddClinic";
+import { state, id } from "./redux/State";
+import addClinicData from "./redux/AddClinicData";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App state={state} addClinic={addClinic} />
+    <App state={state} id={id} addClinicData={addClinicData} />
   </React.StrictMode>
 );
 
