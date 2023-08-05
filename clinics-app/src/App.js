@@ -31,7 +31,7 @@ function App(props) {
               element={
                 <MyClinic
                   id={props.id}
-                  JSONForMyClinics={props.state.myClinicPage.JSONForMyClinics}
+                  JSONForMyClinics={props.state.myClinicPage}
                   addClinicData={props.addClinicData}
                 />
               }

@@ -25,19 +25,19 @@ const AddData = (props) => {
       <p>
         <label>
           Название:
-          <input type="text" ref={addTitle}></input>
+          <input type="text" ref={addTitle} />
         </label>
       </p>
       <p>
         <label>
           Телефон:
-          <input type="text" ref={addPhone}></input>
+          <input type="text" ref={addPhone} />
         </label>
       </p>
       <p>
         <label>
           Описание:
-          <input type="text" ref={addDescription}></input>
+          <input type="text" ref={addDescription} />
         </label>
       </p>
 
