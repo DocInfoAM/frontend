@@ -1,7 +1,7 @@
 const Terms = () => {
     return (
         <div>
-            Пользовательское Соглашение
+            peepeepoopoocheck
         </div>
     )
 }
