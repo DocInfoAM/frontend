@@ -5,7 +5,7 @@ export const state = {
     JSONForMyClinics: [
       {
         id: 0,
-        photoURL: "https://farkop.ru/no_photo.jpeg",
+        photoURL: "https://www.svgrepo.com/show/97385/no-photo.svg",
         clinicName: "Super clinic",
         clinicSpecialisation: "Specialisation one",
         clinicRate: 10,
@@ -35,12 +35,12 @@ export const state = {
             price: 2000,
           },
         ],
-        clinicTags: ["dental", "head", "legs"],
+        clinicTags: ["dental ", "head ", "legs "],
         clinicInformation: "Some description about that clinic",
       },
       {
         id: 1,
-        photoURL: "https://farkop.ru/no_photo.jpeg",
+        photoURL: "https://www.svgrepo.com/show/97385/no-photo.svg",
         clinicName: "Second clinic",
         clinicSpecialisation: "Specialisation two",
         clinicRate: 9,
@@ -66,12 +66,12 @@ export const state = {
             price: 1000,
           },
         ],
-        clinicTags: ["fingers", "foots", "legs"],
+        clinicTags: ["fingers ", "foots ", "legs "],
         clinicInformation: "Some description about second clinic",
       },
       {
         id: 2,
-        photoURL: "https://farkop.ru/no_photo.jpeg",
+        photoURL: "https://www.svgrepo.com/show/97385/no-photo.svg",
         clinicName: "Third clinic",
         clinicSpecialisation: "Specialisation three",
         clinicRate: 10,

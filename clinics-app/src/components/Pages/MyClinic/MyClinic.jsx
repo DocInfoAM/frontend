@@ -10,7 +10,7 @@ const MyClinic = (props) => {
       <h2>My clinic page</h2>
       <h3>Тестовый GET запрос будет ниже</h3>
       <GetData myClinicPage={props.JSONForMyClinics} id={props.id} />
-      <AddData addClinicData={props.addClinicData} />
+      <AddData addClinicData={props.addClinicData} myClinicPage={props.JSONForMyClinics} id={props.id} />
       <br />
       <br />
       <div>
