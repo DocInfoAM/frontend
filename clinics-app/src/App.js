@@ -37,7 +37,7 @@ function App(props) {
             <Route path="/claims" element={<Claims />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/personal-area" element={<PersonalArea />} />
-            <Route path="/all-doctors" element={<AllDoctors />} />
+            <Route path="/all-doctors" element={<AllDoctors doctors={props.doctors}/>} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/sign-out" element={<SignOut />} />
             <Route path="/terms-of-use" element={<TermsOfUse />} />
