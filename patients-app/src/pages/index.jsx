@@ -1,7 +1,9 @@
 const Index = () => {
-    <div>
-        dada 
-    </div>
+    return (
+        <div>
+        поиск по врачам
+        </div>
+    )
 }
 
 export default Index;
