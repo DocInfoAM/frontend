@@ -1,4 +1,4 @@
-const getClinic = async () => {
+const getClinics = async () => {
   const res = await fetch("https://mock-server-docinfo.onrender.com/clinics");
   return await res.json();
 };
@@ -9,7 +9,7 @@ const getDoctors = async () => {
 };
 
 export const doctors = await getDoctors();
-export const state = await getClinic();
+export const clinics = await getClinics();
 
 // export const doctors = [
 //   {
@@ -111,7 +111,7 @@ export const state = await getClinic();
 //   },
 // ];
 
-// export const state = [
+// export const clinics = [
 //   {
 //     id: 0,
 //     photoURL: "https://www.svgrepo.com/show/97385/no-photo.svg",

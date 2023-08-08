@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 export const rerenderEntireTree = (props) => {
   root.render(
     <React.StrictMode>
-      <App state={props.state} doctors={props.doctors} />
+      <App clinics={props.clinics} doctors={props.doctors} />
     </React.StrictMode>
   );
 };
