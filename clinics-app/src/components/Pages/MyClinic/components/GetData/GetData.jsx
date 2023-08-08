@@ -1,29 +1,46 @@
 import classes from "./GetData.module.css";
 
 const getData = (props) => {
-  const clinic = props.myClinicPage.JSONForMyClinics[props.id];
-  const address = clinic.clinicAddress.textAddress;
+  const clinic = props.state;
+  const id = 0;
+  const address = clinic[id].clinicAddress;
+
+  const dataParser = (data, symbolOne = '', symbolTwo = '') => {
+    return data.map((x) => <span key={x}>{symbolOne}{symbolTwo}{x}</span>);
+  };
 
   return (
     <div className={classes.test_block}>
-      <div id={clinic.id} className={classes.data_block}>
-        <h4>Клиника c id = {clinic.id}</h4>
+      <div id={clinic[id].id} className={classes.data_block}>
+        <h4>Клиника c id = {clinic[id].id}</h4>
         <div className={classes.info}>
-          <img src={clinic.photoURL} alt={clinic.clinicName} title={clinic.clinicName} className={classes.img} />
+          <img
+            src={clinic[id].photoURL}
+            alt={clinic[id].clinicName}
+            title={clinic[id].clinicName}
+            className={classes.img}
+          />
           <div>
-            <p>Название: <strong>{clinic.clinicName}</strong></p>
-            <p>Специализация: {clinic.clinicSpecialisation}</p>
-            <p>Рейтинг: {clinic.clinicRate}</p>
             <p>
-              Адрес: {address.city}, {address.street}, дом {address.building}, этаж {address.floor}
+              Название: <strong>{clinic[id].clinicName}</strong>
             </p>
-            <p>Координаты: {clinic.clinicAddress.coordinates[0]}, {clinic.clinicAddress.coordinates[1]}</p>
-            <p>Социальные сети: {clinic.clinicSocialNetworks[0]}</p>
-            <p>Минимальная цена: {clinic.minimalPrice}</p>
-            <p>Сервисы: {clinic.clinicServices[0].service} - {clinic.clinicServices[0].price} драм</p>
-            <p>Теги: {clinic.clinicTags}</p>
-            <p>Телефон: {clinic.clinicPhones}</p>
-            <p>Описание: {clinic.clinicInformation}</p>
+            <p>Специализация: {clinic[id].clinicSpecialisation}</p>
+            <p>Рейтинг: {clinic[id].clinicRate}</p>
+            <p>
+              Адрес: {address.textAddress.city}, {address.textAddress.street}, дом {address.textAddress.building}, этаж{" "}
+              {address.textAddress.floor}
+            </p>
+            <p>
+              Координаты: {address.coordinates[0]}, {address.coordinates[1]}
+            </p>
+            <p>Социальные сети: {dataParser(clinic[id].clinicSocialNetworks, '', <br />)}</p>
+            <p>Минимальная цена: {clinic[id].minimalPrice}</p>
+            <p>
+              Сервисы: {clinic[id].clinicServices[0].service} - {clinic[id].clinicServices[0].price} драм
+            </p>
+            <p>Теги: {dataParser(clinic[id].clinicTags, <br />, '#')}</p>
+            <p>Телефон: {dataParser(clinic[id].clinicPhones, <br />)}</p>
+            <p>Описание: {clinic[id].clinicInformation}</p>
           </div>
         </div>
       </div>

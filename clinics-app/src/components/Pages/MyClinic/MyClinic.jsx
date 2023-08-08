@@ -2,15 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./MyClinic.module.css";
 import GetData from "./components/GetData/GetData";
-import AddData from "./components/AddData/AddData";
 
 const MyClinic = (props) => {
   return (
     <div>
       <h2>My clinic page</h2>
-      <h3>Тестовый GET запрос будет ниже</h3>
-      <GetData myClinicPage={props.JSONForMyClinics} id={props.id} />
-      <AddData addClinicData={props.addClinicData} myClinicPage={props.JSONForMyClinics} id={props.id} />
+      <h3>Тестовый GET запрос ниже</h3>
+      <GetData state={props.state} />
       <br />
       <br />
       <div>

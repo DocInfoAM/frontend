@@ -30,9 +30,7 @@ function App(props) {
               path="/my-clinic"
               element={
                 <MyClinic
-                  id={props.id}
-                  JSONForMyClinics={props.state.myClinicPage}
-                  addClinicData={props.addClinicData}
+                  state={props.state}
                 />
               }
             />
