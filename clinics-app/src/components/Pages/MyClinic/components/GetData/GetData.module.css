@@ -1,0 +1,23 @@
+.data_block {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.info {
+  display: flex;
+}
+
+.test_block {
+  width: 60vw;
+  border: 1px solid #aaa;
+  border-radius: 30px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}

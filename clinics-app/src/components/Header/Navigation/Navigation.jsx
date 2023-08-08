@@ -1,32 +1,42 @@
 import classes from "./Navigation.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
   return (
     <nav className={classes.nav}>
-      <Link to="/myclinic" id="MyClinic">
-        <div className={classes.item}>Моя клиника</div>
-      </Link>
-      <Link to="/claims" id="Claims">
-        <div className={classes.item}>Заявки</div>
-      </Link>
-      <Link to="/schedule" id="Schedule">
-        <div className={classes.item}>Расписание врача</div>
-      </Link>
-      <Link to="/personalarea" id="PersonalArea">
-        <div className={classes.item}>Личный кабинет врача</div>
-      </Link>
-      <Link to="/alldoctors" id="AllDoctors">
-        <div className={classes.item}>Все врачи</div>
-      </Link>
-      <Link to="/contacts" id="Contacts">
-        <div className={classes.item}>Контакты</div>
-      </Link>
-      <Link to="/signout" id="SignOut">
-        <div className={classes.item}>Выход</div>
-      </Link>
+      <NavItem />
     </nav>
   );
 };
+
+const NavItem = () => {
+  return (
+    <>
+      <NavLink to="/my-clinic" id="MyClinic" className={setActive}>
+        <div className={classes.item}>Моя клиника</div>
+      </NavLink>
+      <NavLink to="/claims" id="Claims" className={setActive}>
+        <div className={classes.item}>Заявки</div>
+      </NavLink>
+      <NavLink to="/schedule" id="Schedule" className={setActive}>
+        <div className={classes.item}>Расписание врача</div>
+      </NavLink>
+      <NavLink to="/personal-area" id="PersonalArea" className={setActive}>
+        <div className={classes.item}>Личный кабинет врача</div>
+      </NavLink>
+      <NavLink to="/all-doctors" id="AllDoctors" className={setActive}>
+        <div className={classes.item}>Все врачи</div>
+      </NavLink>
+      <NavLink to="/contacts" id="Contacts" className={setActive}>
+        <div className={classes.item}>Контакты</div>
+      </NavLink>
+      <NavLink to="/sign-out" id="SignOut" className={setActive}>
+        <div className={classes.item}>Выход</div>
+      </NavLink>
+    </>
+  );
+};
+
+const setActive = ({ isActive }) => (isActive ? classes.active : "");
 
 export default Navigation;

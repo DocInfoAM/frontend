@@ -1,0 +1,38 @@
+{
+    "id": "number",
+    "urlPhoto": "string",
+    "email": "string",
+    "login": "string",
+    "password": "string",
+    "title": "string",
+    "description": "string",
+    "address": "string",
+    "rating": "string",
+    "photoURL": "string",
+    "phoneNumber": "string",
+    "days": [
+        {
+            "days": {
+                "monday": "boolean",
+                "tuesday": "boolean",
+                "wednesday": "boolean",
+                "thursday": "boolean",
+                "friday": "boolean",
+                "saturday": "boolean",
+                "sunday": "boolean"
+            },
+            "times": [
+                {
+                    "timeStart": "string",
+                    "timeEnd": "string"
+                }
+            ],
+            "daysOff": [
+                "date",
+                "month",
+                "year"
+            ]
+            
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "id": "number",
+    "email": "string",
+    "login": "string",
+    "password": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "lastName": "string",
+    "specialty": "string",
+    "photoURL": "string",
+    "phoneNumber": "string",
+    "rating": "number",
+    "dates": [
+        {
+            "date": "string",
+            "times": [
+                {
+                    "timeStart": "string",
+                    "timeEnd": "string"
+                }   
+            ]
+        }
+    ]
+}
