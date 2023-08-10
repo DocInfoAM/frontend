@@ -11,6 +11,8 @@ const getDoctors = async () => {
 export const doctors = await getDoctors();
 export const clinics = await getClinics();
 
+// If server is brake
+
 // export const doctors = [
 //   {
 //     id: 0,
