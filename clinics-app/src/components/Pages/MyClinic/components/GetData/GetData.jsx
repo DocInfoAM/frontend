@@ -5,13 +5,28 @@ const getData = (props) => {
   const id = 0;
   const address = clinic[id].clinicAddress;
 
-  const dataParser = (data, symbolOne = '', symbolTwo = '') => {
-    return data.map((x) => <span key={x}>{symbolOne}{symbolTwo}{x}</span>);
+  const clinicSchedule = props.clinicSchedule;
+  console.log(clinicSchedule);
+
+  const dataParser = (data, symbolOne = "", symbolTwo = "") => {
+    return data.map((x) => (
+      <span key={x}>
+        {symbolOne}
+        {symbolTwo}
+        {x}
+      </span>
+    ));
   };
 
-  const dataParserForServices = (data, symbolOne = '', symbolTwo = '') => {
-    return data.map((x) => <span key={x.service}>{symbolOne}{symbolTwo}{x.service} - {x.price} драм</span>)
-  }
+  const dataParserForServices = (data, symbolOne = "", symbolTwo = "") => {
+    return data.map((x) => (
+      <span key={x.service}>
+        {symbolOne}
+        {symbolTwo}
+        {x.service} - {x.price} драм
+      </span>
+    ));
+  };
 
   return (
     <div className={classes.test_block}>
@@ -37,16 +52,31 @@ const getData = (props) => {
             <p>
               Координаты: {address.coordinates[0]}, {address.coordinates[1]}
             </p>
-            <p>Социальные сети: {dataParser(clinic[id].clinicSocialNetworks, '', <br />)}</p>
+            <p>Социальные сети: {dataParser(clinic[id].clinicSocialNetworks, "", <br />)}</p>
             <p>Минимальная цена: {clinic[id].minimalPrice}</p>
-            <p>
-              Сервисы: {dataParserForServices(clinic[id].clinicServices, <br />)}
-            </p>
-            <p>Теги: {dataParser(clinic[id].clinicTags, <br />, '#')}</p>
+            <p>Сервисы: {dataParserForServices(clinic[id].clinicServices, <br />)}</p>
+            <p>Теги: {dataParser(clinic[id].clinicTags, <br />, "#")}</p>
             <p>Телефон: {dataParser(clinic[id].clinicPhones, <br />)}</p>
             <p>Описание: {clinic[id].clinicInformation}</p>
           </div>
         </div>
+      </div>
+      <div>
+        <p>Отзывы:</p>
+        <p>
+          {clinicSchedule[id].reviews.map((x) => {
+            return (
+              <div>
+                <p>Дата отзыва: {x.date_of_review}</p>
+                <p>Дата визита: {x.date_of_visit}</p>
+                <p>ID пациента: {x.patient_id}</p>
+                <p>Номер телефона: {x.phone_number}</p>
+                <p>Рейтинг: {x.rating}</p>
+                <p>Отзыв: {x.text_of_review}</p>
+              </div>
+            );
+          })}
+        </p>
       </div>
     </div>
   );
