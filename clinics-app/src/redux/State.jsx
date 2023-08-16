@@ -8,10 +8,74 @@ const getDoctors = async () => {
   return await res.json();
 };
 
+const getClinicSchedule = async () => {
+  const res = await fetch("https://mock-server-docinfo.onrender.com/clinicsreviews");
+  return await res.json();
+};
+
+// const getDoctorsSchedule = async () => {
+//   const res = await fetch("https://mock-server-docinfo.onrender.com/doctorsreviews");
+//   return await res.json();
+// };
+
+// export const doctorsSchedule = await getDoctorsSchedule();
+export const clinicSchedule = await getClinicSchedule();
 export const doctors = await getDoctors();
 export const clinics = await getClinics();
 
 // If server is brake
+
+// export const getClinicSchedule = [
+//   {
+//     clinic_id: 0,
+//     reviews: [
+//       {
+//         patient_id: "PATIENT001",
+//         phone_number: "+374-41-720001",
+//         date_of_review: "2023-08-16",
+//         date_of_visit: "2023-08-10",
+//         text_of_review:
+//           "I had a great experience at this clinic. The staff was friendly and the facilities were clean.",
+//         rating: 4,
+//       },
+//       {
+//         patient_id: "PATIENT002",
+//         phone_number: "+374-41-720002",
+//         date_of_review: "2023-08-15",
+//         date_of_visit: "2023-08-12",
+//         text_of_review:
+//           "I was quite satisfied with the service I received. The doctor was knowledgeable and attentive.",
+//         rating: 5,
+//       },
+//     ],
+//   },
+//   {
+//     clinic_id: 1,
+//     reviews: [
+//       {
+//         patient_id: "PATIENT003",
+//         phone_number: "+374-41-720003",
+//         date_of_review: "2023-08-14",
+//         date_of_visit: "2023-08-09",
+//         text_of_review: "I had a positive experience at this clinic. The treatment I received was effective.",
+//         rating: 4,
+//       },
+//     ],
+//   },
+//   {
+//     clinic_id: 2,
+//     reviews: [
+//       {
+//         patient_id: "PATIENT004",
+//         phone_number: "+374-41-720004",
+//         date_of_review: "2023-08-13",
+//         date_of_visit: "2023-08-11",
+//         text_of_review: "I had a disappointing experience at this clinic. The staff was not very helpful.",
+//         rating: 2,
+//       },
+//     ],
+//   },
+// ];
 
 // export const doctors = [
 //   {

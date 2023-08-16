@@ -28,16 +28,15 @@ function App(props) {
             <Route exact path="/" element={<Index />} />
             <Route
               path="/my-clinic"
-              element={
-                <MyClinic
-                  clinics={props.clinics}
-                />
-              }
+              element={<MyClinic clinics={props.clinics} clinicSchedule={props.clinicSchedule} />}
             />
             <Route path="/claims" element={<Claims />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/personal-area" element={<PersonalArea />} />
-            <Route path="/all-doctors" element={<AllDoctors doctors={props.doctors}/>} />
+            <Route
+              path="/all-doctors"
+              element={<AllDoctors doctors={props.doctors} doctorsSchedule={props.doctorsSchedule} />}
+            />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/sign-out" element={<SignOut />} />
             <Route path="/terms-of-use" element={<TermsOfUse />} />

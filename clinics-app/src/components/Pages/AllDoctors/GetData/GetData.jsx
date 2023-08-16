@@ -13,11 +13,13 @@ const getData = (props) => {
   const dataParserForSimpleArray = (data) => {
     return data.map((x) => (
       <span key={x}>
-        <br />
+        <br /> 
         {x}
       </span>
     ));
   };
+
+  console.log(props.doctorsSchedule)
 
   return (
     <>
@@ -30,7 +32,7 @@ const getData = (props) => {
                   src="https://www.svgrepo.com/show/97385/no-photo.svg"
                   alt={doctor.name}
                   title={doctor.name}
-                  className={classes.img}
+                  className={classes.img} 
                 ></img>
                 <div>
                   <h4>Name: {doctor.name}</h4>
@@ -45,7 +47,7 @@ const getData = (props) => {
                   <p>Specialisation: {doctor.specialisation}</p>
                   <p>Price: {doctor.price_for_visit}</p>
                   <p>Additional Services: {dataParserForAdditionalServices(doctor.additional_services)}</p>
-                  <p>Aditional Specialisations: {dataParserForSimpleArray(doctor.additional_specialisations)}</p>
+                  <p>Additional Specialisations: {dataParserForSimpleArray(doctor.additional_specialisations)}</p>
                   <p>Disease Tags: {dataParserForSimpleArray(doctor.disease_tags)}</p>
                   <p>Working Schedule: {dataParserForSimpleArray(doctor.workingSchedule)}</p>
                 </div>
