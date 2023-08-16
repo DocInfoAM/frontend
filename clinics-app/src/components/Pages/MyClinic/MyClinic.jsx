@@ -8,7 +8,7 @@ const MyClinic = (props) => {
     <div>
       <h2>My clinic page</h2>
       <h3>Тестовый GET запрос ниже</h3>
-      <GetData state={props.state} />
+      <GetData clinics={props.clinics} />
       <br />
       <br />
       <div>

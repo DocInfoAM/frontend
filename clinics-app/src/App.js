@@ -30,7 +30,7 @@ function App(props) {
               path="/my-clinic"
               element={
                 <MyClinic
-                  state={props.state}
+                  clinics={props.clinics}
                 />
               }
             />

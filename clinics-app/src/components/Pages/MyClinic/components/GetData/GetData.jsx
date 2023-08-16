@@ -1,7 +1,7 @@
 import classes from "./GetData.module.css";
 
 const getData = (props) => {
-  const clinic = props.state;
+  const clinic = props.clinics;
   const id = 0;
   const address = clinic[id].clinicAddress;
 

@@ -1,8 +1,10 @@
+import GetData from "./GetData/GetData";
+
 const AllDoctors = (props) => {
   return (
     <div>
       <h2>All Doctors</h2>
-      <p>{console.log(props)}</p>
+      <GetData doctors={props.doctors} />
     </div>
   );
 };
