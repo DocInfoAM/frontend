@@ -62,11 +62,10 @@ const getData = (props) => {
         </div>
       </div>
       <div>
-        <p>Отзывы:</p>
-        <p>
+        <h4>Отзывы:</h4>
           {clinicSchedule[id].reviews.map((x) => {
             return (
-              <div>
+              <div key={x.text_of_review} className={classes.singleReview}>
                 <p>Дата отзыва: {x.date_of_review}</p>
                 <p>Дата визита: {x.date_of_visit}</p>
                 <p>ID пациента: {x.patient_id}</p>
@@ -76,7 +75,6 @@ const getData = (props) => {
               </div>
             );
           })}
-        </p>
       </div>
     </div>
   );

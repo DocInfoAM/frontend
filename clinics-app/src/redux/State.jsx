@@ -13,12 +13,12 @@ const getClinicSchedule = async () => {
   return await res.json();
 };
 
-// const getDoctorsSchedule = async () => {
-//   const res = await fetch("https://mock-server-docinfo.onrender.com/doctorsreviews");
-//   return await res.json();
-// };
+const getDoctorsSchedule = async () => {
+  const res = await fetch("https://mock-server-docinfo.onrender.com/doctorsreviews");
+  return await res.json();
+};
 
-// export const doctorsSchedule = await getDoctorsSchedule();
+export const doctorsSchedule = await getDoctorsSchedule();
 export const clinicSchedule = await getClinicSchedule();
 export const doctors = await getDoctors();
 export const clinics = await getClinics();

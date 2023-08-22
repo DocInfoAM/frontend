@@ -1,0 +1,6 @@
+.reviewBlock {
+    border: 1px solid blue;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+}

@@ -1,4 +1,6 @@
 import classes from "./GetData.module.css";
+import { doctorsSchedule } from './../../../../redux/State';
+import GetReview from "./GetReview";
 
 const getData = (props) => {
   const dataParserForAdditionalServices = (data) => {
@@ -52,6 +54,7 @@ const getData = (props) => {
                   <p>Working Schedule: {dataParserForSimpleArray(doctor.workingSchedule)}</p>
                 </div>
               </div>
+              <GetReview doctorsSchedule={props.doctorsSchedule} doctorID={doctor.id} />
             </div>
           </div>
         );
