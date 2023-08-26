@@ -22,8 +22,8 @@
     margin: 20px;
   }
   
-  .singleReview {
+  .patientInfo, .visitInfo {
     margin: 10px 20px;
-    border: 1px solid blue;
+    border: 1px solid rgb(149, 149, 250);
     border-radius: 25px;
   }
