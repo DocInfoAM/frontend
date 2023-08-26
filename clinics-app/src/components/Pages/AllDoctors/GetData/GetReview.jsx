@@ -1,7 +1,8 @@
 import classes from "./GetReview.module.css";
 
 const GetReview = (props) => {
-  return (
+    console.log(props.doctorsSchedule)
+    return (
     <div>
       <h4>Отзывы:</h4>
       {props.doctorsSchedule[props.doctorID].reviews.map((review) => {

@@ -6,7 +6,6 @@ const getData = (props) => {
   const address = clinic[id].clinicAddress;
 
   const clinicSchedule = props.clinicSchedule;
-  console.log(clinicSchedule);
 
   const dataParser = (data, symbolOne = "", symbolTwo = "") => {
     return data.map((x) => (

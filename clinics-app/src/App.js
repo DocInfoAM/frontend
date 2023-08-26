@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MyClinic from "./components/Pages/MyClinic/MyClinic";
-import Claims from "./components/Pages/Claims/Claims";
+import Requests from "./components/Pages/Requests/Requests";
 import Schedule from "./components/Pages/Schedule/Schedule";
 import PersonalArea from "./components/Pages/PersonalArea/PersonalArea";
 import AllDoctors from "./components/Pages/AllDoctors/AllDoctors";
@@ -30,7 +30,7 @@ function App(props) {
               path="/my-clinic"
               element={<MyClinic clinics={props.clinics} clinicSchedule={props.clinicSchedule} />}
             />
-            <Route path="/claims" element={<Claims />} />
+            <Route path="/requests" element={<Requests requests={props.requests} />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/personal-area" element={<PersonalArea />} />
             <Route

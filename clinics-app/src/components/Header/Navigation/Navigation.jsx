@@ -15,7 +15,7 @@ const NavItem = () => {
       <NavLink to="/my-clinic" id="MyClinic" className={setActive}>
         <div className={classes.item}>Моя клиника</div>
       </NavLink>
-      <NavLink to="/claims" id="Claims" className={setActive}>
+      <NavLink to="/requests" id="Requests" className={setActive}>
         <div className={classes.item}>Заявки</div>
       </NavLink>
       <NavLink to="/schedule" id="Schedule" className={setActive}>

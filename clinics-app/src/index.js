@@ -1,9 +1,9 @@
 import classes from "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { rerenderEntireTree } from "./render";
-import { clinics, doctors, clinicSchedule, doctorsSchedule } from "./redux/State";
+import { clinics, doctors, clinicSchedule, doctorsSchedule, requests } from "./redux/State";
 
-rerenderEntireTree({ clinics, doctors, clinicSchedule, doctorsSchedule });
+rerenderEntireTree({ clinics, doctors, clinicSchedule, doctorsSchedule, requests });
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
