@@ -13,6 +13,7 @@ export const rerenderEntireTree = (props) => {
         doctors={props.doctors}
         clinicSchedule={props.clinicSchedule}
         doctorsSchedule={props.doctorsSchedule}
+        requests={props.requests}
       />
     </React.StrictMode>
   );

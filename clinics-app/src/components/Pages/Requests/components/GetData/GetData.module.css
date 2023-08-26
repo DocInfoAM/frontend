@@ -1,0 +1,29 @@
+.data_block {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .info {
+    display: flex;
+  }
+  
+  .test_block {
+    width: 60vw;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  
+  .img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+  }
+  
+  .singleReview {
+    margin: 10px 20px;
+    border: 1px solid blue;
+    border-radius: 25px;
+  }

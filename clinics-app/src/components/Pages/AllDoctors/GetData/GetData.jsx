@@ -21,8 +21,6 @@ const getData = (props) => {
     ));
   };
 
-  console.log(props.doctorsSchedule)
-
   return (
     <>
       {props.doctors.map((doctor) => {

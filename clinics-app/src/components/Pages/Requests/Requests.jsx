@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
+import GetData from './components/GetData/GetData';
 
-const Claims = () => {
+const Requests = (props) => {
   return (
     <div>
-      <h2>Claims</h2>
+      <h2>Requests</h2>
       <p>
         <Link to="/all-doctors">Список врачей</Link>
       </p>
       <p>
         <Link to="/my-clinic">Страница моей клиники</Link>
       </p>
+      <GetData requests={props.requests} />
       <br />
       <br />
       <h2>Логика</h2>
@@ -27,4 +29,4 @@ const Claims = () => {
   );
 };
 
-export default Claims;
+export default Requests;
