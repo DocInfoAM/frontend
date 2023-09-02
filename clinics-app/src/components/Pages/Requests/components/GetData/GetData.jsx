@@ -19,12 +19,12 @@ const GetData = (props) => {
                       <p>Номер телефона: {value.phone_number}</p>
                       <p>Дата заявки: {value.date_of_request}</p>
                       <p>Время заявки: {value.time_of_request}</p>
+                      <p>Комментарий пациента: {value.patients_commentary}</p>
                     </div>
                     <div className={styles.visitInfo}>
-                      <p>ID Врача: {value.doctor_id ? value.doctor_id : <span style={{color: 'red'}}>"Не назначен"</span>}</p>
+                      <p>ID Врача: {value.doctor_id ? value.doctor_id : <span style={{color: 'red'}}>Не назначен</span>}</p>
                       <p>Дата визита: {value.date_of_visit}</p>
                       <p>Время визита: {value.time_of_visit}</p>
-                      <p>Комментарий пациента: {value.patients_commentary}</p>
                       <p>Комментарий клиники: {value.clinics_commentary}</p>
                     </div>
                   </div>
