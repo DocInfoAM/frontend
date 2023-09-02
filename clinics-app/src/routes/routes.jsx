@@ -16,27 +16,29 @@ import Statistics from "../components/Pages/Statistics/Statistics";
 import TopUpAccountBalance from "../components/Pages/TopUpAccountBalance/TopUpAccountBalance";
 import AccountBalance from "../components/Pages/AccountBalance/AccountBalance";
 
-export const UseRoutes = (props) => {
+export const CustomRoutes = (props) => {
   return (
     <Routes>
       <Route exact path="/" element={<Index />} />
-      <Route path="/my-clinic" element={<MyClinic clinics={props.clinics} clinicSchedule={props.clinicSchedule} />} />
-      <Route path="/requests" element={<Requests requests={props.requests} />} />
-      <Route path="/schedule" element={<Schedule />} />
-      <Route path="/personal-area" element={<PersonalArea />} />
-      <Route
-        path="/all-doctors"
-        element={<AllDoctors doctors={props.doctors} doctorsSchedule={props.doctorsSchedule} />}
-      />
-      <Route path="/contacts" element={<Contacts />} />
+      <Route element={<PrivateRoute />}>
+        <Route path="/my-clinic" element={<MyClinic clinics={props.clinics} clinicSchedule={props.clinicSchedule} />} />
+        <Route path="/requests" element={<Requests requests={props.requests} />} />
+        <Route path="/schedule" element={<Schedule />} />
+        <Route path="/personal-area" element={<PersonalArea />} />
+        <Route
+          path="/all-doctors"
+          element={<AllDoctors doctors={props.doctors} doctorsSchedule={props.doctorsSchedule} />}
+        />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/account-balance" element={<AccountBalance />} />
+        <Route path="/edit-schedule" element={<EditSchedule />} />
+        <Route path="/statistics" element={<Statistics />} />
+      </Route>
       <Route path="/sign-out" element={<SignOut />} />
-      <Route path="/terms-of-use" element={<TermsOfUse />} />
-      <Route path="/password-recovery" element={<PasswordRecovery />} />
-      <Route path="/account-balance" element={<AccountBalance />} />
-      <Route path="/edit-schedule" element={<EditSchedule />} />
-      <Route path="/statistics" element={<Statistics />} />
-      <Route path="/top-up-account-balance" element={<TopUpAccountBalance />} />
       <Route path="*" element={<NotFoundPage />} />
+      <Route path="/contacts" element={<Contacts />} />
+      <Route path="/password-recovery" element={<PasswordRecovery />} />
+      <Route path="/top-up-account-balance" element={<TopUpAccountBalance />} />
     </Routes>
   );
 };

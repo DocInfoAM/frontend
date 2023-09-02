@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import { UseRoutes } from "./routes/routes";
+import { CustomRoutes } from "./routes/routes";
 
 function App(props) {
   return (
@@ -10,7 +10,7 @@ function App(props) {
       <div className="app-wrapper">
         <Header />
         <div className="content">
-          <UseRoutes
+          <CustomRoutes
             clinics={props.clinics}
             clinicSchedule={props.clinicSchedule}
             requests={props.requests}
