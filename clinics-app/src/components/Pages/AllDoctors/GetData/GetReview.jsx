@@ -1,7 +1,6 @@
 import classes from "./GetReview.module.css";
 
 const GetReview = (props) => {
-    console.log(props.doctorsSchedule)
     return (
     <div>
       <h4>Отзывы:</h4>

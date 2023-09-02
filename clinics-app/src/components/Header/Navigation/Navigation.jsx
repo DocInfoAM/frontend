@@ -1,5 +1,6 @@
 import classes from "./Navigation.module.css";
 import { NavLink } from "react-router-dom";
+import CustomAuth from "../../../hooks/useAuth";
 
 const Navigation = () => {
   return (
@@ -10,6 +11,8 @@ const Navigation = () => {
 };
 
 const NavItem = () => {
+  const { isAuthenticated } = CustomAuth();
+
   return (
     <>
       <NavLink to="/my-clinic" id="MyClinic" className={setActive}>
@@ -30,9 +33,19 @@ const NavItem = () => {
       <NavLink to="/contacts" id="Contacts" className={setActive}>
         <div className={classes.item}>Контакты</div>
       </NavLink>
-      <NavLink to="/sign-out" id="SignOut" className={setActive}>
+      {isAuthenticated ? (
+        <NavLink to="/sign-out" id="SignOut" className={setActive}>
+          <div className={classes.item}>Выход</div>
+        </NavLink>
+      ) : (
+        <NavLink to="/" id="SignIn" className={setActive}>
+          <div className={classes.item}>Вход</div>
+        </NavLink>
+      )}
+
+      {/* <NavLink to="/sign-out" id="SignOut" className={setActive}>
         <div className={classes.item}>Выход</div>
-      </NavLink>
+      </NavLink> */}
     </>
   );
 };
