@@ -1,9 +1,0 @@
-{
-    "id": "number",
-    "patientID": "number",
-    "clinicID": "number",
-    "docID": "number",
-    "rating": "string",
-    "title": "string",
-    "description": "string"
-}

@@ -1,9 +1,9 @@
-import classes from "./Footer.module.css";
+import styles from "./Footer.module.css";
 import FooterNavigation from "./FooterNavigation/FooterNavigation"
 
 const Footer = () => {
   return (
-    <div className={classes.footer}>
+    <div className={styles.footer}>
       <FooterNavigation />
     </div>
   );

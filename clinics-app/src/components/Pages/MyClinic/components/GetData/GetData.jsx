@@ -1,4 +1,4 @@
-import classes from "./GetData.module.css";
+import styles from "./GetData.module.css";
 
 const getData = (props) => {
   const clinic = props.clinics;
@@ -28,15 +28,15 @@ const getData = (props) => {
   };
 
   return (
-    <div className={classes.test_block}>
-      <div id={clinic[id].id} className={classes.data_block}>
+    <div className={styles.test_block}>
+      <div id={clinic[id].id} className={styles.data_block}>
         <h4>Клиника c id = {clinic[id].id}</h4>
-        <div className={classes.info}>
+        <div className={styles.info}>
           <img
             src={clinic[id].photoURL}
             alt={clinic[id].clinicName}
             title={clinic[id].clinicName}
-            className={classes.img}
+            className={styles.img}
           />
           <div>
             <p>
@@ -64,7 +64,7 @@ const getData = (props) => {
         <h4>Отзывы:</h4>
           {clinicSchedule[id].reviews.map((x) => {
             return (
-              <div key={x.text_of_review} className={classes.singleReview}>
+              <div key={x.text_of_review} className={styles.singleReview}>
                 <p>Дата отзыва: {x.date_of_review}</p>
                 <p>Дата визита: {x.date_of_visit}</p>
                 <p>ID пациента: {x.patient_id}</p>

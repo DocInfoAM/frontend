@@ -10,13 +10,13 @@ function App(props) {
       <div className="app-wrapper">
         <Header />
         <div className="content">
-          <CustomRoutes
-            clinics={props.clinics}
-            clinicSchedule={props.clinicSchedule}
-            requests={props.requests}
-            doctors={props.doctors}
-            doctorsSchedule={props.doctorsSchedule}
-          />
+            <CustomRoutes
+              clinics={props.clinics}
+              clinicSchedule={props.clinicSchedule}
+              requests={props.requests}
+              doctors={props.doctors}
+              doctorsSchedule={props.doctorsSchedule}
+            />
         </div>
         <Footer />
       </div>

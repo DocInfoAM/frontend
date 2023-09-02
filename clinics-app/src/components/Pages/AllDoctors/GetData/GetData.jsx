@@ -1,4 +1,4 @@
-import classes from "./GetData.module.css";
+import styles from "./GetData.module.css";
 import { doctorsSchedule } from './../../../../redux/State';
 import GetReview from "./GetReview";
 
@@ -25,14 +25,14 @@ const getData = (props) => {
     <>
       {props.doctors.map((doctor) => {
         return (
-          <div className={classes.test_block} key={doctor.id}>
-            <div id={doctor.id} className={classes.data_block}>
-              <div className={classes.info}>
+          <div className={styles.test_block} key={doctor.id}>
+            <div id={doctor.id} className={styles.data_block}>
+              <div className={styles.info}>
                 <img
                   src="https://www.svgrepo.com/show/97385/no-photo.svg"
                   alt={doctor.name}
                   title={doctor.name}
-                  className={classes.img} 
+                  className={styles.img} 
                 ></img>
                 <div>
                   <h4>Name: {doctor.name}</h4>
