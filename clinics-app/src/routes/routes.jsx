@@ -29,16 +29,16 @@ export const CustomRoutes = (props) => {
           path="/all-doctors"
           element={<AllDoctors doctors={props.doctors} doctorsSchedule={props.doctorsSchedule} />}
         />
-        <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/account-balance" element={<AccountBalance />} />
         <Route path="/edit-schedule" element={<EditSchedule />} />
         <Route path="/statistics" element={<Statistics />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/top-up-account-balance" element={<TopUpAccountBalance />} />
       </Route>
+      <Route path="/terms-of-use" element={<TermsOfUse />} />
       <Route path="/sign-out" element={<SignOut />} />
       <Route path="*" element={<NotFoundPage />} />
-      <Route path="/contacts" element={<Contacts />} />
       <Route path="/password-recovery" element={<PasswordRecovery />} />
-      <Route path="/top-up-account-balance" element={<TopUpAccountBalance />} />
     </Routes>
   );
 };
