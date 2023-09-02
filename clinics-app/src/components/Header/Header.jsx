@@ -1,11 +1,11 @@
 import Navigation from "./Navigation/Navigation";
 import ChangeLanguages from "./ChangeLanguages/ChangeLanguages";
-import classes from "./Header.module.css";
+import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header className={classes.header}>
-      <div className={classes.div_header_img}>
+    <header className={styles.header}>
+      <div className={styles.div_header_img}>
         <img
           id="logo"
           alt="logo"

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import classes from "./MyClinic.module.css";
+import styles from "./MyClinic.module.css";
 import GetData from "./components/GetData/GetData";
 
 const MyClinic = (props) => {

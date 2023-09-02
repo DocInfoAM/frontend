@@ -1,4 +1,4 @@
-import classes from "./AddData.module.css";
+import styles from "./AddData.module.css";
 import React from "react";
 
 const AddData = (props) => {

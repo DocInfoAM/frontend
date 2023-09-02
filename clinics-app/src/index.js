@@ -1,4 +1,4 @@
-import classes from "./index.css";
+import styles from "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { rerenderEntireTree } from "./render";
 import { clinics, doctors, clinicSchedule, doctorsSchedule, requests } from "./redux/State";

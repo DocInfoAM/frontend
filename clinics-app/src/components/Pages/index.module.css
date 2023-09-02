@@ -2,3 +2,13 @@
     color: rgb(0, 48, 102);
     text-decoration: underline;
 }
+
+.loginButton {
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: rgb(218, 251, 240);
+    margin-top: 150px;
+    border: 1px solid;
+    cursor: pointer;
+}

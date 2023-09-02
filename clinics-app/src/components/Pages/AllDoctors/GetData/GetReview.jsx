@@ -1,4 +1,4 @@
-import classes from "./GetReview.module.css";
+import styles from "./GetReview.module.css";
 
 const GetReview = (props) => {
     return (
@@ -6,7 +6,7 @@ const GetReview = (props) => {
       <h4>Отзывы:</h4>
       {props.doctorsSchedule[props.doctorID].reviews.map((review) => {
         return (
-          <div key={review.text_of_review} className={classes.reviewBlock}>
+          <div key={review.text_of_review} className={styles.reviewBlock}>
             <p>
               Дата отзыва: <span>{review.date_of_review}</span>
             </p>
