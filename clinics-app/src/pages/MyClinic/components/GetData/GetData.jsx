@@ -31,8 +31,7 @@ const getData = (props) => {
   return (
     <div className={styles.test_block}>
       <div id={clinic[id].id} className={styles.data_block}>
-        <h4>Клиника c id = {clinic[id].id},</h4>
-        <p>id можно поменять в src/pages/MyClinic и тогда подгрузится новая клиника и отзывы к ней</p>
+        <small>Клиника c id = {clinic[id].id}, id можно поменять в src/pages/MyClinic/GetData/GetData и тогда подгрузится новая клиника и отзывы к ней</small>
         <div className={styles.info}>
           <img
             src={clinic[id].photoURL}
