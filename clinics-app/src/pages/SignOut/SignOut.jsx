@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import CustomAuth from "../../../hooks/useAuth";
+import CustomAuth from "../../hooks/useAuth";
 
 const SignOut = () => {
   const { setAuth } = CustomAuth();
