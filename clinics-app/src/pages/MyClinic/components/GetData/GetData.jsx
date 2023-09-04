@@ -1,3 +1,4 @@
+import Review from "../../../../components/Review/Review";
 import styles from "./GetData.module.css";
 
 const getData = (props) => {
@@ -30,7 +31,7 @@ const getData = (props) => {
   return (
     <div className={styles.test_block}>
       <div id={clinic[id].id} className={styles.data_block}>
-        <h4>Клиника c id = {clinic[id].id}</h4>
+        <small>Клиника c id = {clinic[id].id}, id можно поменять в src/pages/MyClinic/GetData/GetData и тогда подгрузится новая клиника и отзывы к ней</small>
         <div className={styles.info}>
           <img
             src={clinic[id].photoURL}
@@ -64,23 +65,8 @@ const getData = (props) => {
       </div>
       <div>
         <h4>Отзывы:</h4>
-        {clinicSchedule[id].reviews.map((x) => {
-          return (
-            <div key={x.text_of_review} className={styles.single__review}>
-              <div className={styles.review__block__header}>
-                <div>
-                  <p><strong>Дата отзыва:</strong> {x.date_of_review}</p>
-                  <p><strong>Дата визита:</strong> {x.date_of_visit}</p>
-                </div>
-                <div>
-                  <p><strong>ID пациента:</strong> {x.patient_id}</p>
-                  <p><strong>Номер телефона:</strong> {x.phone_number}</p>
-                </div>
-              </div>
-              <p><strong>Рейтинг:</strong> {x.rating}</p>
-              <p><strong>Отзыв:</strong> {x.text_of_review}</p>
-            </div>
-          );
+        {clinicSchedule[id].reviews.map((review) => {
+          return <Review review={review} key={review.text_of_review} />;
         })}
       </div>
     </div>

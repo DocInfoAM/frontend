@@ -1,5 +1,4 @@
 import styles from "./GetData.module.css";
-import { doctorsSchedule } from './../../../../redux/State';
 import GetReview from "./GetReview";
 
 const getData = (props) => {

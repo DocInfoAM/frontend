@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import CustomAuth from "./../../hooks/useAuth";
+import CustomAuth from "../hooks/useAuth";
 import styles from "./index.module.css";
 
 const Index = () => {
@@ -10,7 +10,6 @@ const Index = () => {
 
   return (
     <div>
-      <>
         <button
           type={"button"}
           className={styles.loginButton}
@@ -21,7 +20,6 @@ const Index = () => {
         >
           Login
         </button>
-      </>
     </div>
   );
 };

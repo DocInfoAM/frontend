@@ -1,20 +1,20 @@
 import { Route, Routes } from "react-router-dom";
 import { PrivateRoute } from "../components/Header/PrivetRoute/PrivetRoute";
-import MyClinic from "../components/Pages/MyClinic/MyClinic";
-import Requests from "../components/Pages/Requests/Requests";
-import Schedule from "../components/Pages/Schedule/Schedule";
-import PersonalArea from "../components/Pages/PersonalArea/PersonalArea";
-import AllDoctors from "../components/Pages/AllDoctors/AllDoctors";
-import Contacts from "../components/Pages/Contacts/Contacts";
-import SignOut from "../components/Pages/SignOut/SignOut";
-import Index from "../components/Pages";
-import NotFoundPage from "../components/Pages/404";
-import TermsOfUse from "../components/Pages/TermsOfUse/TermsOfUse";
-import PasswordRecovery from "../components/Pages/PasswordRecovery/PasswordRecovery";
-import EditSchedule from "../components/Pages/EditSchedule/EditSchedule";
-import Statistics from "../components/Pages/Statistics/Statistics";
-import TopUpAccountBalance from "../components/Pages/TopUpAccountBalance/TopUpAccountBalance";
-import AccountBalance from "../components/Pages/AccountBalance/AccountBalance";
+import MyClinic from "../pages/MyClinic/MyClinic";
+import Requests from "../pages/Requests/Requests";
+import Schedule from "../pages/Schedule/Schedule";
+import PersonalArea from "../pages/PersonalArea/PersonalArea";
+import AllDoctors from "../pages/AllDoctors/AllDoctors";
+import Contacts from "../pages/Contacts/Contacts";
+import SignOut from "../pages/SignOut/SignOut";
+import Index from "../pages/index";
+import NotFoundPage from "../pages/404";
+import TermsOfUse from "../pages/TermsOfUse/TermsOfUse";
+import PasswordRecovery from "../pages/PasswordRecovery/PasswordRecovery";
+import EditSchedule from "../pages/EditSchedule/EditSchedule";
+import Statistics from "../pages/Statistics/Statistics";
+import TopUpAccountBalance from "../pages/TopUpAccountBalance/TopUpAccountBalance";
+import AccountBalance from "../pages/AccountBalance/AccountBalance";
 import { clinics, doctors, clinicSchedule, doctorsSchedule, requests } from "../redux/State";
 
 export const CustomRoutes = () => {
