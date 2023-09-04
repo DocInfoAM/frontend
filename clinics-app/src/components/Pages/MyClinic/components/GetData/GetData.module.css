@@ -1,6 +1,5 @@
 .data_block {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   text-align: left;
 }
 
@@ -9,21 +8,45 @@
 }
 
 .test_block {
-  width: 60vw;
-  border: 1px solid #aaa;
+  max-width: 90%;
   border-radius: 30px;
   margin: 10px auto;
   padding: 10px;
 }
 
 .img {
-  width: 100px;
-  height: 100px;
-  margin: 20px;
+  width: 200px;
+  height: 300px;
+  margin: 20px 20px 20px 0;
+  border: 1px solid #bdbdbd;
+  background-color: #bdbdbd;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.singleReview {
-  margin: 10px 20px;
-  border: 1px solid blue;
+.single__review {
   border-radius: 25px;
+  text-align: left;
+  padding: 20px 0;
+}
+
+p {
+  margin: 5px 0;
+  padding: 0;
+}
+
+.second__block {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+h4 {
+  text-align: left;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.review__block__header {
+  display: flex;
 }

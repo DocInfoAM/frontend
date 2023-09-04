@@ -186,7 +186,7 @@ export const requests = await getRequests();
 // export const clinics = [
 //   {
 //     id: 0,
-//     photoURL: "https://www.svgrepo.com/show/97385/no-photo.svg",
+//     photoURL: "./img/nophoto.jpg",
 //     clinicName: "Super clinic",
 //     clinicSpecialisation: "Specialisation one",
 //     clinicRate: 10,
@@ -221,7 +221,7 @@ export const requests = await getRequests();
 //   },
 //   {
 //     id: 1,
-//     photoURL: "https://www.svgrepo.com/show/97385/no-photo.svg",
+//     photoURL: "./img/nophoto.jpg",
 //     clinicName: "Second clinic",
 //     clinicSpecialisation: "Specialisation two",
 //     clinicRate: 9,
@@ -252,7 +252,7 @@ export const requests = await getRequests();
 //   },
 //   {
 //     id: 2,
-//     photoURL: "https://www.svgrepo.com/show/97385/no-photo.svg",
+//     photoURL: "./img/nophoto.jpg",
 //     clinicName: "Third clinic",
 //     clinicSpecialisation: "Specialisation three",
 //     clinicRate: 10,

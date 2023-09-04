@@ -29,7 +29,7 @@ const getData = (props) => {
             <div id={doctor.id} className={styles.data_block}>
               <div className={styles.info}>
                 <img
-                  src="https://www.svgrepo.com/show/97385/no-photo.svg"
+                  src="./img/nophoto.jpg"
                   alt={doctor.name}
                   title={doctor.name}
                   className={styles.img} 
