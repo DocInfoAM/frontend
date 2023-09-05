@@ -4,7 +4,6 @@ import styles from "./index.css";
 import App from "./App";
 import { AuthProvider } from "./components/Context/AuthProvider";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 export const rerenderEntireTree = (props) => {
@@ -12,6 +11,7 @@ export const rerenderEntireTree = (props) => {
     <React.StrictMode>
       <AuthProvider>
         <App
+          clinicID={props.clinicID}
           clinics={props.clinics}
           doctors={props.doctors}
           clinicSchedule={props.clinicSchedule}

@@ -1,5 +1,5 @@
-import styles from "./AddData.module.css";
 import React from "react";
+import styles from "./AddData.module.css";
 
 const AddData = (props) => {
   const addTitle = React.createRef(); // создаём реф для того, что бы забрать данные из текстовых полей

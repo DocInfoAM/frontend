@@ -11,6 +11,7 @@ function App(props) {
         <Header />
         <div className="content">
             <CustomRoutes
+              clinicID = {props.clinicID}
               clinics={props.clinics}
               clinicSchedule={props.clinicSchedule}
               requests={props.requests}

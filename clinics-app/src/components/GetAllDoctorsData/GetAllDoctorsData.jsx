@@ -1,7 +1,7 @@
-import styles from "./GetData.module.css";
-import GetReview from "./GetReview";
+import styles from "./GetAllDoctorsData.module.css";
+import Review from "../Review/Review";
 
-const getData = (props) => {
+const GetAllDoctorsData = (props) => {
   const dataParserForAdditionalServices = (data) => {
     return data.map((x) => (
       <span key={x.service}>
@@ -14,7 +14,7 @@ const getData = (props) => {
   const dataParserForSimpleArray = (data) => {
     return data.map((x) => (
       <span key={x}>
-        <br /> 
+        <br />
         {x}
       </span>
     ));
@@ -25,14 +25,9 @@ const getData = (props) => {
       {props.doctors.map((doctor) => {
         return (
           <div className={styles.test_block} key={doctor.id}>
+            <img src="./img/nophoto.jpg" alt={doctor.name} title={doctor.name} className={styles.img}></img>
             <div id={doctor.id} className={styles.data_block}>
               <div className={styles.info}>
-                <img
-                  src="./img/nophoto.jpg"
-                  alt={doctor.name}
-                  title={doctor.name}
-                  className={styles.img} 
-                ></img>
                 <div>
                   <h4>Name: {doctor.name}</h4>
                   <p>Email: {doctor.email}</p>
@@ -51,7 +46,10 @@ const getData = (props) => {
                   <p>Working Schedule: {dataParserForSimpleArray(doctor.workingSchedule)}</p>
                 </div>
               </div>
-              <GetReview doctorsSchedule={props.doctorsSchedule} doctorID={doctor.id} />
+              <h4>Отзывы:</h4>
+              {props.doctorsSchedule[doctor.id].reviews.map((review) => {
+                return <Review review={review} key={review.text_of_review} />;
+              })}
             </div>
           </div>
         );
@@ -60,4 +58,4 @@ const getData = (props) => {
   );
 };
 
-export default getData;
+export default GetAllDoctorsData;

@@ -1,14 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./MyClinic.module.css";
-import GetData from "./components/GetData/GetData";
+import GetClinicData from "../../components/GetClinicData/GetClinicData";
 
 const MyClinic = (props) => {
   return (
     <div>
-      <GetData clinics={props.clinics} clinicSchedule={props.clinicSchedule} />
-      <br />
-      <br />
+      <GetClinicData clinicID={props.clinicID} clinics={props.clinics} clinicSchedule={props.clinicSchedule} />
       <div>
         <h3>Ссылки</h3>
         <p>
