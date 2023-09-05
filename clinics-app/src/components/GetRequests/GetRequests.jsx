@@ -1,13 +1,12 @@
-import styles from "./GetData.module.css";
+import styles from "./GetRequests.module.css";
 
-const GetData = (props) => {
+const GetRequests = (props) => {
   return (
     <>
       {props.requests.map((request) => {
         return (
-          <div key={request.requests[0].request_id}>
-            <p>ID Клиники: {request.clinic_id}</p>
-            <p>Заявки:</p>
+          <div key={request.requests[props.clinicID].request_id}>
+            <p>Название клиники: {props.clinics[props.clinicID].clinicName}</p>
             <div>
               {request.requests.map((value) => {
                 return (
@@ -38,4 +37,4 @@ const GetData = (props) => {
   );
 };
 
-export default GetData;
+export default GetRequests;

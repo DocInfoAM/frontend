@@ -1,0 +1,21 @@
+.data_block {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.info {
+  display: flex;
+}
+
+.test_block {
+  width: 250px;
+  margin: 0;
+  padding: 10px;
+}
+
+.img {
+  width: 100%;
+  height: 300px;
+  background-color: #bdbdbd;
+  box-sizing: border-box;
+}

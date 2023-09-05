@@ -1,3 +1,5 @@
+export const clinicID = 1
+
 const getClinics = async () => {
   const res = await fetch("https://mock-server-docinfo.onrender.com/clinics");
   return await res.json();

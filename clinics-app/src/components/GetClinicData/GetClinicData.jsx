@@ -1,9 +1,9 @@
-import Review from "../../../../components/Review/Review";
-import styles from "./GetData.module.css";
+import Review from "../Review/Review";
+import styles from "./GetClinicData.module.css";
 
-const getData = (props) => {
+const GetClinicData = (props) => {
   const clinic = props.clinics;
-  const id = 0; // задаём необходимую клинику
+  const id = props.clinicID;
   const address = clinic[id].clinicAddress;
 
   const clinicSchedule = props.clinicSchedule;
@@ -31,7 +31,7 @@ const getData = (props) => {
   return (
     <div className={styles.test_block}>
       <div id={clinic[id].id} className={styles.data_block}>
-        <small>Клиника c id = {clinic[id].id}, id можно поменять в src/pages/MyClinic/GetData/GetData и тогда подгрузится новая клиника и отзывы к ней</small>
+        <small>Клиника c id = {clinic[id].id}, id можно поменять в src/redux/State и тогда подгрузится новая клиника и отзывы к ней</small>
         <div className={styles.info}>
           <img
             src={clinic[id].photoURL}
@@ -73,4 +73,4 @@ const getData = (props) => {
   );
 };
 
-export default getData;
+export default GetClinicData;

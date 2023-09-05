@@ -15,20 +15,19 @@ import EditSchedule from "../pages/EditSchedule/EditSchedule";
 import Statistics from "../pages/Statistics/Statistics";
 import TopUpAccountBalance from "../pages/TopUpAccountBalance/TopUpAccountBalance";
 import AccountBalance from "../pages/AccountBalance/AccountBalance";
-import { clinics, doctors, clinicSchedule, doctorsSchedule, requests } from "../redux/State";
 
-export const CustomRoutes = () => {
+export const CustomRoutes = (props) => {
   return (
     <Routes>
       <Route exact path="/" element={<Index />} />
       <Route element={<PrivateRoute />}>
-        <Route path="/my-clinic" element={<MyClinic clinics={clinics} clinicSchedule={clinicSchedule} />} />
-        <Route path="/requests" element={<Requests requests={requests} />} />
+        <Route path="/my-clinic" element={<MyClinic clinicID={props.clinicID} clinics={props.clinics} clinicSchedule={props.clinicSchedule} />} />
+        <Route path="/requests" element={<Requests clinicID={props.clinicID} requests={props.requests} clinics={props.clinics} />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/personal-area" element={<PersonalArea />} />
         <Route
           path="/all-doctors"
-          element={<AllDoctors doctors={doctors} doctorsSchedule={doctorsSchedule} />}
+          element={<AllDoctors clinicID={props.clinicID} doctors={props.doctors} doctorsSchedule={props.doctorsSchedule} />}
         />
         <Route path="/account-balance" element={<AccountBalance />} />
         <Route path="/edit-schedule" element={<EditSchedule />} />
