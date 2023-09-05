@@ -9,11 +9,17 @@
 }
 
 .test_block {
-  width: 60vw;
-  border: 1px solid #aaa;
-  border-radius: 30px;
+  width: 100%;
   margin: 10px auto;
   padding: 10px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+}
+
+.test_block > * {
+  min-width: 20%;
+  max-width: 200px;
 }
 
 .img {
@@ -28,7 +34,5 @@
 
 .patientInfo,
 .visitInfo {
-  margin: 10px 20px;
-  border: 1px solid rgb(149, 149, 250);
-  border-radius: 25px;
+  margin: 0px 20px;
 }

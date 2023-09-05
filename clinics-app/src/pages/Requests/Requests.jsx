@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import GetRequests from '../../components/GetRequests/GetRequests';
+import GetRequests from "../../components/GetRequests/GetRequests";
 
 const Requests = (props) => {
   return (

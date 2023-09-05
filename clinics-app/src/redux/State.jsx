@@ -1,4 +1,4 @@
-export const clinicID = 1
+export const clinicID = 0;
 
 const getClinics = async () => {
   const res = await fetch("https://mock-server-docinfo.onrender.com/clinics");
@@ -32,6 +32,87 @@ export const clinics = await getClinics();
 export const requests = await getRequests();
 
 // If server is brake
+
+// export const doctorsSchedule = [
+//   {
+//     doctor_id: 0,
+//     clinic_id: 0,
+//     reviews: [
+//       {
+//         patient_id: "PATIENT001",
+//         phone_number: "+374-41-720001",
+//         date_of_review: "2023-08-16",
+//         date_of_visit: "2023-08-10",
+//         text_of_review: "Dr. Smith was very knowledgeable and provided excellent care.",
+//         rating: 5,
+//       },
+//       {
+//         patient_id: "PATIENT002",
+//         phone_number: "+374-41-720002",
+//         date_of_review: "2023-08-15",
+//         date_of_visit: "2023-08-12",
+//         text_of_review: "I had a positive experience with Dr. Smith. He explained everything clearly.",
+//         rating: 4,
+//       },
+//     ],
+//   },
+//   {
+//     doctor_id: 1,
+//     clinic_id: 1,
+//     reviews: [
+//       {
+//         patient_id: "PATIENT003",
+//         phone_number: "+374-41-720003",
+//         date_of_review: "2023-08-14",
+//         date_of_visit: "2023-08-09",
+//         text_of_review: "Dr. Johnson was attentive and caring throughout the appointment.",
+//         rating: 5,
+//       },
+//     ],
+//   },
+//   {
+//     doctor_id: 2,
+//     clinic_id: 1,
+//     reviews: [
+//       {
+//         patient_id: "PATIENT004",
+//         phone_number: "+374-41-720004",
+//         date_of_review: "2023-08-13",
+//         date_of_visit: "2023-08-11",
+//         text_of_review: "I was disappointed with the service provided by Dr. Wilson.",
+//         rating: 2,
+//       },
+//     ],
+//   },
+//   {
+//     doctor_id: 3,
+//     clinic_id: 0,
+//     reviews: [
+//       {
+//         patient_id: "PATIENT005",
+//         phone_number: "+374-41-720005",
+//         date_of_review: "2023-08-12",
+//         date_of_visit: "2023-08-08",
+//         text_of_review: "Dr. Brown was friendly and took the time to address my concerns.",
+//         rating: 4,
+//       },
+//     ],
+//   },
+//   {
+//     doctor_id: 4,
+//     clinic_id: 2,
+//     reviews: [
+//       {
+//         patient_id: "PATIENT006",
+//         phone_number: "+374-41-720006",
+//         date_of_review: "2023-08-11",
+//         date_of_visit: "2023-08-07",
+//         text_of_review: "Dr. Davis provided excellent care and was very thorough.",
+//         rating: 5,
+//       },
+//     ],
+//   },
+// ];
 
 // export const getClinicSchedule = [
 //   {
@@ -88,9 +169,10 @@ export const requests = await getRequests();
 // export const doctors = [
 //   {
 //     id: 0,
+//  !! +   clinic_id: 0,
 //     name: "Dr. Sarah Johnson",
 //     email: "sarah.johnson@example.com",
-//     clinic: {
+//  !! -  clinic: {
 //       name: "City Medical Center",
 //       address: { city: "Los Angeles", street: "Main Street", building: 456, floor: 3 },
 //     },
@@ -287,11 +369,13 @@ export const requests = await getRequests();
 
 // export const requests = [
 //   {
-//     request_id: 0,
-//     clinic_id: 0,
-//     requests: [
-//       {
-//         request_id: 0,
+//  !! -  request_id: 0,
+//  !! -   clinic_id: 0,
+//  !! -   requests: [
+//  !! -     {
+//  !! +      clinic_id: 0, 
+//  !! +      request_id: 0,
+//  !! +      active: true,
 //         patient_id: "PATIENT001",
 //         is_callback_needed: true,
 //         patient_name: "Joe Dow",
