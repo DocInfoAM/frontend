@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { PrivateRoute } from "../components/Header/PrivetRoute/PrivetRoute";
+import { PrivateRoute } from "./PrivetRoute";
 import MyClinic from "../pages/MyClinic/MyClinic";
 import Requests from "../pages/Requests/Requests";
 import Schedule from "../pages/Schedule/Schedule";
