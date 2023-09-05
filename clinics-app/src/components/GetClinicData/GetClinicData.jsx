@@ -64,7 +64,7 @@ const GetClinicData = (props) => {
         <p>Теги: {dataParser(clinic[id].clinicTags, <br />, "#")}</p>
       </div>
       <div>
-        <h4>Отзывы:</h4>
+        <h4 className={styles.h4__left}>Отзывы:</h4>
         {clinicSchedule[id].reviews.map((review) => {
           return <Review review={review} key={review.text_of_review} />;
         })}
