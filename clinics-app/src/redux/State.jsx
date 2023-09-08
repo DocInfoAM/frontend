@@ -36,7 +36,7 @@ export const requests = await getRequests();
 // export const doctorsSchedule = [
 //   {
 //     doctor_id: 0,
-//     clinic_id: 0,
+//  !! -   clinic_id: 0,
 //     reviews: [
 //       {
 //         patient_id: "PATIENT001",
@@ -168,7 +168,7 @@ export const requests = await getRequests();
 
 // export const doctors = [
 //   {
-//     id: 0,
+//  !! +   doctor_id: 0,
 //  !! +   clinic_id: 0,
 //     name: "Dr. Sarah Johnson",
 //     email: "sarah.johnson@example.com",
@@ -373,7 +373,8 @@ export const requests = await getRequests();
 //  !! -   clinic_id: 0,
 //  !! -   requests: [
 //  !! -     {
-//  !! +      clinic_id: 0, 
+//  !! +      clinic_id: 0,
+//  !! +      doctor_id: 1,
 //  !! +      request_id: 0,
 //  !! +      active: true,
 //         patient_id: "PATIENT001",

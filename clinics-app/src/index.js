@@ -1,3 +1,4 @@
+import './index.css'
 import { rerenderEntireTree } from "./render";
 import { clinicID, clinics, doctors, clinicSchedule, doctorsSchedule, requests } from "./redux/State";
 

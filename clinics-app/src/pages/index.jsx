@@ -18,8 +18,9 @@ const Index = () => {
             navigate(from, { replace: true });
           }}
         >
-          Login
+          Login Clinic
         </button>
+        
     </div>
   );
 };
