@@ -36,9 +36,9 @@ const Clinics = () => {
                     <div>Минимальная стоимость за услугу: {clinic.minimalPrice}</div>
                     <div>Услуги: {clinic.clinicServices.map((services)=> {return(<><br/>{services.service} {services.price}</>)})}</div>
                     <div>Тэги: {clinic.clinicTags}</div>
-                    <div>Отзывы: {reviewList.map((review)=>{if (clinic.id === review.clinic_id) {
+                    <div>Отзывы: {reviewList.filter((review)=> (clinic.id === review.clinic_id)).map((review)=>{
                       return(<>{review.reviews.map((currentReview)=>{return(<><br />{currentReview.patient_id} <br />{currentReview.phone_number} <br />Дата Обзора: {currentReview.date_of_review} <br />Дата посещения: {currentReview.date_of_visit} <br />Рейтинг: {currentReview.rating} <br />{currentReview.text_of_review} <br /></>)})}</>)
-                    }})}</div>
+                    }) }</div>
               <br /> </> )
             })
     }
