@@ -1,4 +1,7 @@
 # frontend
-Users apps
+
+Clinic app
+
 # deploy
-https://spontaneous-salamander-6fccd4.netlify.app/
+
+clinics-app: https://spontaneous-salamander-6fccd4.netlify.app/

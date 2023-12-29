@@ -1,5 +1,10 @@
 export const clinicID = 0;
 
+const registerNewUser = async () => {
+  const res = await fetch("https://docinfoam-mvp-dev-server.vercel.app/api/auth/register");
+  return await res.json();
+};
+
 const getClinics = async () => {
   const res = await fetch("https://mock-server-docinfo.onrender.com/clinics");
   return await res.json();
@@ -30,13 +35,14 @@ export const clinicSchedule = await getClinicSchedule();
 export const doctors = await getDoctors();
 export const clinics = await getClinics();
 export const requests = await getRequests();
+// export const newUser = await registerNewUser();
 
-// If server is brake
+// If server is broken
 
 // export const doctorsSchedule = [
 //   {
 //     doctor_id: 0,
-//     clinic_id: 0,
+//  !! -   clinic_id: 0,
 //     reviews: [
 //       {
 //         patient_id: "PATIENT001",
@@ -168,7 +174,7 @@ export const requests = await getRequests();
 
 // export const doctors = [
 //   {
-//     id: 0,
+//  !! +   doctor_id: 0,
 //  !! +   clinic_id: 0,
 //     name: "Dr. Sarah Johnson",
 //     email: "sarah.johnson@example.com",
@@ -373,7 +379,8 @@ export const requests = await getRequests();
 //  !! -   clinic_id: 0,
 //  !! -   requests: [
 //  !! -     {
-//  !! +      clinic_id: 0, 
+//  !! +      clinic_id: 0,
+//  !! +      doctor_id: 1,
 //  !! +      request_id: 0,
 //  !! +      active: true,
 //         patient_id: "PATIENT001",

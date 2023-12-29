@@ -7,7 +7,9 @@ const AuthContext = createContext({
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setAuth] = useState(false);
-  return <AuthContext.Provider value={{ isAuthenticated, setAuth }}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={{ isAuthenticated, setAuth }}>{children}</AuthContext.Provider>
+  );
 };
 
 export default AuthContext;

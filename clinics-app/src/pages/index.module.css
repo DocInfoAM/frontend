@@ -1,14 +1,30 @@
+.loginBlock {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 100px auto 0 auto;
+  align-items: center;
+}
+
+.login_input,
+.password_input {
+  margin-top: 10px;
+}
+
 .link {
-    color: rgb(0, 48, 102);
-    text-decoration: underline;
+  color: rgb(0, 48, 102);
+  text-decoration: underline;
 }
 
 .loginButton {
-    width: 200px;
-    height: 60px;
-    border-radius: 10px;
-    background-color: rgb(218, 251, 240);
-    margin-top: 150px;
-    border: 1px solid;
-    cursor: pointer;
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #f2fefe;
+  margin-top: 30px;
+  border: 0px solid;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 16px 0px rgba(181, 181, 181, 0.5);
+  -moz-box-shadow: 0px 1px 16px 0px rgba(181, 181, 181, 0.5);
+  box-shadow: 0px 1px 16px 0px rgba(181, 181, 181, 0.5);
 }
