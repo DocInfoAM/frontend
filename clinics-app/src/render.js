@@ -16,6 +16,7 @@ export const rerenderEntireTree = (props) => {
           clinicSchedule={props.clinicSchedule}
           doctorsSchedule={props.doctorsSchedule}
           requests={props.requests}
+          newUser={props.newUser}
         />
       </AuthProvider>
     </React.StrictMode>

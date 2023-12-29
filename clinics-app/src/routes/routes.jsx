@@ -19,7 +19,7 @@ import AccountBalance from "../pages/AccountBalance/AccountBalance";
 export const CustomRoutes = (props) => {
   return (
     <Routes>
-      <Route exact path="/" element={<Index />} />
+      <Route exact path="/" element={<Index newUser={props.newUser} />} />
       <Route element={<PrivateRoute />}>
         <Route
           path="/my-clinic"
