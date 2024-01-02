@@ -4,4 +4,4 @@ Clinic app
 
 # deploy
 
-clinics-app: https://spontaneous-salamander-6fccd4.netlify.app/
+clinics-app: https://docinfoam-clinics.netlify.app/

@@ -8,9 +8,63 @@ const Index = (props) => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/my-clinic";
 
+  async function getUserToken() {
+    const userEmail = document.forms.login.login.value;
+    const userPassword = document.forms.login.password.value;
+    const paramsGetUserToken = {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({
+        email: userEmail,
+        password: userPassword,
+      }),
+    };
+
+    const res = await fetch("https://docinfoam-mvp-dev-server.vercel.app/api/auth/login", paramsGetUserToken)
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (data) {
+        console.log(data);
+        if (data.accessToken) {
+          getUserData();
+        }
+      })
+      .catch(function (error) {
+        console.error("Ошибка:", error);
+        return;
+      });
+  }
+
+  async function getUserData() {
+    const userEmail = document.forms.login.login.value;
+    const paramsGetUserData = {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+      },
+    };
+
+    const userInformation = await fetch(
+      `https://docinfoam-mvp-dev-server.vercel.app/api/user/${userEmail}`,
+      paramsGetUserData
+    )
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (data) {
+        console.log(data);
+      })
+      .catch(function (error) {
+        console.error("Ошибка:", error);
+      });
+  }
+
   return (
     <div className={styles.loginBlock}>
-      <form>
+      <form name="login">
         <input
           className={styles.login_input}
           type="text"
@@ -36,32 +90,7 @@ const Index = (props) => {
           autoComplete="current-password"
         />
       </form>
-      <button
-        type={"button"}
-        className={styles.loginButton}
-        onClick={async () => {
-          const params = {
-            method: "POST",
-            headers: {
-              "Content-type": "application/json",
-            },
-            body: JSON.stringify({
-              email: "user001@mail.com",
-              password: "123456",
-            }),
-          };
-          const res = await fetch("https://docinfoam-mvp-dev-server.vercel.app/api/auth/login", params)
-            .then(function (res) {
-              return res.json();
-            })
-            .then(function (data) {
-              console.log(data);
-            })
-            .catch(function (error) {
-              console.error("Ошибка:", error);
-            });
-        }}
-      >
+      <button type={"button"} className={styles.loginButton} onClick={getUserToken}>
         Вход
       </button>
     </div>
