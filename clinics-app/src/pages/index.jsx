@@ -30,6 +30,8 @@ const Index = (props) => {
         console.log(data);
         if (data.accessToken) {
           getUserData();
+          setAuth(true);
+          navigate(from, { replace: true });
         }
       })
       .catch(function (error) {
@@ -76,6 +78,8 @@ const Index = (props) => {
           size="30"
           placeholder="email"
           autoComplete="username"
+          value="user001@mail.com"
+          onChange={() => {}}
         />
         <input
           className={styles.password_input}
@@ -88,6 +92,8 @@ const Index = (props) => {
           size="30"
           placeholder="password"
           autoComplete="current-password"
+          value="123456"
+          onChange={() => {}}
         />
       </form>
       <button type={"button"} className={styles.loginButton} onClick={getUserToken}>
