@@ -47,9 +47,9 @@ const GetAllDoctorsData = (props) => {
                 </div>
               </div>
               <h4>Отзывы:</h4>
-              {props.doctorsSchedule[doctor.id].reviews.map((review) => {
+              {/* {props.doctorsSchedule[doctor.id].reviews.map((review) => {
                 return <Review review={review} key={review.text_of_review} />;
-              })}
+              })} */}
             </div>
           </div>
         );

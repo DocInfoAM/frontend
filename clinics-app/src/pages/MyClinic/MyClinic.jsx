@@ -5,7 +5,11 @@ import GetClinicData from "../../components/GetClinicData/GetClinicData";
 const MyClinic = (props) => {
   return (
     <div>
-      <GetClinicData clinicID={props.clinicID} clinics={props.clinics} clinicSchedule={props.clinicSchedule} />
+      <GetClinicData
+        clinicID={props.clinicID}
+        clinics={props.clinics}
+        // clinicSchedule={props.clinicSchedule}
+      />
       <div>
         <h3>Ссылки</h3>
         <p>

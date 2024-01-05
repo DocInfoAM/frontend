@@ -4,7 +4,7 @@ const GetRequests = (props) => {
   return (
     <>
       <h2>Заявки для {props.clinics[props.clinicID].clinicName}</h2>
-      {props.requests.map((request) => {
+      {/* {props.requests.map((request) => {
         if (request.clinic_id === props.clinicID) {
           return (
             <div key={request.clinic_id}>
@@ -43,7 +43,7 @@ const GetRequests = (props) => {
         } else {
           return <p key="no_new_requests">Новых заявок нет</p>;
         }
-      })}
+      })} */}
     </>
   );
 };
