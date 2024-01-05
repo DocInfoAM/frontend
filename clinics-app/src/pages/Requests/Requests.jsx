@@ -4,7 +4,11 @@ import GetRequests from "../../components/GetRequests/GetRequests";
 const Requests = (props) => {
   return (
     <div>
-      <GetRequests clinicID={props.clinicID} requests={props.requests} clinics={props.clinics} />
+      <GetRequests
+        clinicID={props.clinicID}
+        // requests={props.requests}
+        clinics={props.clinics}
+      />
       <br />
       <br />
       <h2>Ссылки:</h2>

@@ -6,7 +6,7 @@ const GetClinicData = (props) => {
   const id = props.clinicID;
   const address = clinic[id].clinicAddress;
 
-  const clinicSchedule = props.clinicSchedule;
+  // const clinicSchedule = props.clinicSchedule;
 
   const dataParser = (data, symbolOne = "", symbolTwo = "") => {
     return data.map((x) => (
@@ -31,7 +31,10 @@ const GetClinicData = (props) => {
   return (
     <div className={styles.test_block}>
       <div id={clinic[id].id} className={styles.data_block}>
-        <small>Клиника c id = {clinic[id].id}, id можно поменять в src/redux/State и тогда подгрузится новая клиника и отзывы к ней</small>
+        <small>
+          Клиника c id = {clinic[id].id}, id можно поменять в src/redux/State и тогда подгрузится новая клиника и отзывы
+          к ней
+        </small>
         <div className={styles.info}>
           <img
             src={clinic[id].photoURL}
@@ -65,9 +68,9 @@ const GetClinicData = (props) => {
       </div>
       <div>
         <h4 className={styles.h4__left}>Отзывы:</h4>
-        {clinicSchedule[id].reviews.map((review) => {
+        {/* {clinicSchedule[id].reviews.map((review) => {
           return <Review review={review} key={review.text_of_review} />;
-        })}
+        })} */}
       </div>
     </div>
   );

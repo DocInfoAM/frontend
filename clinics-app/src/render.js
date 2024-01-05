@@ -13,9 +13,9 @@ export const rerenderEntireTree = (props) => {
           clinicID={props.clinicID}
           clinics={props.clinics}
           doctors={props.doctors}
-          clinicSchedule={props.clinicSchedule}
-          doctorsSchedule={props.doctorsSchedule}
-          requests={props.requests}
+          // clinicSchedule={props.clinicSchedule}
+          // doctorsSchedule={props.doctorsSchedule}
+          // requests={props.requests}
           newUser={props.newUser}
         />
       </AuthProvider>
