@@ -14,6 +14,7 @@ function App(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
         const result = await doctors();
         setData(result);
       } catch (error) {
