@@ -5,7 +5,7 @@ import Footer from "./components/Footer/Footer";
 import { CustomRoutes } from "./routes/routes";
 import Loading from "./components/Loading/Loading";
 import { useState, useEffect } from "react";
-import { doctors } from "./redux/State"
+import { getDoctors } from "./redux/State"
 
 function App(props) {
   const [data, setData] = useState(null);
@@ -15,8 +15,8 @@ function App(props) {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const result = await doctors();
-        setData(result);
+        const data = await getDoctors();
+        setData(data);
       } catch (error) {
         console.error('Error in useEffect:', error);
       } finally {

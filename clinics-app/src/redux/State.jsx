@@ -5,7 +5,7 @@ const getClinics = async () => {
   return await res.json();
 };
 
-const getDoctors = async () => {
+export const getDoctors = async () => {
   const res = await fetch("https://mock-server-docinfo.onrender.com/doctors");
   return await res.json();
 };
