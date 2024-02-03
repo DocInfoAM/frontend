@@ -62,6 +62,8 @@ const Index = (props) => {
       .catch(function (error) {
         console.error("Ошибка:", error);
       });
+
+    return userInformation;
   }
 
   return (

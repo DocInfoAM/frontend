@@ -22,10 +22,11 @@ const GetAllDoctorsData = (props) => {
 
   return (
     <>
-      {props.doctors.map((doctor) => {
-        return (
-          <div className={styles.test_block} key={doctor.id}>
-            <img src="./img/nophoto.jpg" alt={doctor.name} title={doctor.name} className={styles.img}></img>
+      {/* {props.doctors.map((doctor) => { */}
+      {/* return ( */}
+      <div className={styles.test_block}>
+        some text
+        {/* <img src="./img/nophoto.jpg" alt={doctor.name} title={doctor.name} className={styles.img}></img>
             <div id={doctor.id} className={styles.data_block}>
               <div className={styles.info}>
                 <div>
@@ -47,13 +48,10 @@ const GetAllDoctorsData = (props) => {
                 </div>
               </div>
               <h4>Отзывы:</h4>
-              {/* {props.doctorsSchedule[doctor.id].reviews.map((review) => {
-                return <Review review={review} key={review.text_of_review} />;
-              })} */}
-            </div>
-          </div>
-        );
-      })}
+            </div> */}
+      </div>
+      {/* );
+      })} */}
     </>
   );
 };

@@ -19,39 +19,12 @@ import AccountBalance from "../pages/AccountBalance/AccountBalance";
 export const CustomRoutes = (props) => {
   return (
     <Routes>
-      <Route exact path="/" element={<Index newUser={props.newUser} />} />
+      <Route exact path="/" element={<Index />} />
       <Route element={<PrivateRoute />}>
-        <Route
-          path="/my-clinic"
-          element={
-            <MyClinic
-              clinicID={props.clinicID}
-              clinics={props.clinics}
-              // clinicSchedule={props.clinicSchedule}
-            />
-          }
-        />
-        <Route
-          path="/requests"
-          element={
-            <Requests
-              clinicID={props.clinicID}
-              // requests={props.requests}
-              clinics={props.clinics}
-            />
-          }
-        />
+        <Route path="/my-clinic" element={<MyClinic />} />
+        <Route path="/requests" element={<Requests />} />
         <Route path="/schedule" element={<Schedule />} />
-        <Route
-          path="/all-doctors"
-          element={
-            <AllDoctors
-              clinicID={props.clinicID}
-              doctors={props.doctors}
-              // doctorsSchedule={props.doctorsSchedule}
-            />
-          }
-        />
+        <Route path="/all-doctors" element={<AllDoctors />} />
         <Route path="/account-balance" element={<AccountBalance />} />
         <Route path="/edit-schedule" element={<EditSchedule />} />
         <Route path="/statistics" element={<Statistics />} />
