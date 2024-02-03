@@ -5,7 +5,6 @@ import Footer from "./components/Footer/Footer";
 import { CustomRoutes } from "./routes/routes";
 import Loading from "./components/Loading/Loading";
 import { useState, useEffect } from "react";
-import { getDoctors } from "./redux/State"
 
 function App(props) {
   const [data, setData] = useState(null);
@@ -13,15 +12,19 @@ function App(props) {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        setLoading(true);
-        const data = await getDoctors();
-        setData(data);
-      } catch (error) {
-        console.error('Error in useEffect:', error);
-      } finally {
-        setLoading(false);
-      }
+      setLoading(true);
+      const data = await fetch("https://docinfoam-mvp-dev-server.vercel.app/api")
+        .then(function (response) {
+          return response.json()
+        })
+        .then(function (data) {
+          console.log(data.message)
+        })
+        .catch(function (error) {
+          console.error("Ошибка:", error);
+        });
+      setData(data);
+      setLoading(false);
     };
 
     fetchData();
@@ -29,24 +32,19 @@ function App(props) {
 
   return (
     <>
-      {loading ? <Loading /> :
-        <BrowserRouter>
-          <div className="app-wrapper">
-            <Header />
-            <div className="content">
-              <CustomRoutes
-                clinicID={props.clinicID}
-                clinics={props.clinics}
-                doctors={props.doctors}
-                // clinicSchedule={props.clinicSchedule}
-                // requests={props.requests}
-                // doctorsSchedule={props.doctorsSchedule}
-                newUser={props.newUser}
-              />
+      {
+        loading ?
+          (<Loading />)
+          :
+          (<BrowserRouter>
+            <div className="app-wrapper">
+              <Header />
+              <div className="content">
+                <CustomRoutes />
+              </div>
+              <Footer />
             </div>
-            <Footer />
-          </div>
-        </BrowserRouter>
+          </BrowserRouter>)
       }
     </>
   );

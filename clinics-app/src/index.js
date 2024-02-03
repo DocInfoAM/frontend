@@ -1,5 +1,5 @@
 import './index.css'
 import { rerenderEntireTree } from "./render";
-import { clinicID, clinics, doctors } from "./redux/State";
+// import { clinicID, clinics, doctors } from "./redux/State";
 
-rerenderEntireTree({ clinicID, clinics, doctors });
+rerenderEntireTree({});

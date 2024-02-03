@@ -32,8 +32,8 @@ const getRequests = async () => {
 
 // export const doctorsSchedule = await getDoctorsSchedule();
 // export const clinicSchedule = await getClinicSchedule();
-export const doctors = await getDoctors();
-export const clinics = await getClinics();
+// export const doctors = await getDoctors();
+// export const clinics = await getClinics();
 // export const requests = await getRequests();
 // export const newUser = await registerNewUser();
 
