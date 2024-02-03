@@ -63,7 +63,7 @@ const Index = (props) => {
         return res.json();
       })
       .then(function (data) {
-        // console.log(data); // выводим данные в консоль
+        console.log(data); // выводим данные в консоль
         getUserDataFromServer(data); // создаём переменную с данными пользователя
         console.log(userDataFromServer);
         // exportData(getUserDataFromServer(data));
