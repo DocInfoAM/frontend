@@ -1,13 +1,20 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import CustomAuth from "../hooks/useAuth";
 import styles from "./index.module.css";
+import React, { useState, useEffect } from "react";
+
+// export const exportData = (data) => {
+//   return data; // попытка экспортировать данные из этого компонента
+// };
 
 const Index = (props) => {
   const { setAuth } = CustomAuth();
+  const [userDataFromServer, getUserDataFromServer] = useState();
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/my-clinic";
 
+  // забираем данные из инпутов, формируем запрос и отправляем на сервер
   async function getUserToken() {
     const userEmail = document.forms.login.login.value;
     const userPassword = document.forms.login.password.value;
@@ -27,11 +34,9 @@ const Index = (props) => {
         return res.json();
       })
       .then(function (data) {
-        console.log(data);
+        console.log(data); // получаем ответ сервера и проверяем наличие токена
         if (data.accessToken) {
-          getUserData();
-          setAuth(true);
-          navigate(from, { replace: true });
+          getUserData(); // вызываем данные по пользователю
         }
       })
       .catch(function (error) {
@@ -40,6 +45,7 @@ const Index = (props) => {
       });
   }
 
+  // забираем емайл и по нему запрашиваем данные пользователя
   async function getUserData() {
     const userEmail = document.forms.login.login.value;
     const paramsGetUserData = {
@@ -57,7 +63,12 @@ const Index = (props) => {
         return res.json();
       })
       .then(function (data) {
-        console.log(data);
+        // console.log(data); // выводим данные в консоль
+        getUserDataFromServer(data); // создаём переменную с данными пользователя
+        console.log(userDataFromServer);
+        // exportData(getUserDataFromServer(data));
+        setAuth(true); // кастомную авторизацию в true
+        navigate(from, { replace: true }); // делаем переадресацию на приватную страницу
       })
       .catch(function (error) {
         console.error("Ошибка:", error);
