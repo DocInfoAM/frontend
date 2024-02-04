@@ -6,10 +6,6 @@ import { useUser } from "../context/UserProvider";
 const Index = (props) => {
   const { authUser } = useUser();
 
-  // const navigate = useNavigate();
-  // const location = useLocation();
-  // const from = location.state?.from?.pathname || "/my-clinic";
-
   const [email, setEmail] = useState("user001@mail.com");
   const [password, setPassword] = useState("123456");
 
