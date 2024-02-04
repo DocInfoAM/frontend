@@ -9,28 +9,6 @@ import { useUser } from "./context/UserProvider";
 
 function App(props) {
   const { isLoading } = useUser()
-  // const [data, setData] = useState(null);
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     setLoading(true);
-  //     const data = await fetch("https://docinfoam-mvp-dev-server.vercel.app/api")
-  //       .then(function (response) {
-  //         return response.json()
-  //       })
-  //       .then(function (data) {
-  //         console.log(data.message)
-  //       })
-  //       .catch(function (error) {
-  //         console.error("Ошибка:", error);
-  //       });
-  //     setData(data);
-  //     setLoading(false);
-  //   };
-
-  //   fetchData();
-  // }, []);
 
   return (
     <>
