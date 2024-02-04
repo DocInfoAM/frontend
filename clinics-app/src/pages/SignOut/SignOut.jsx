@@ -4,13 +4,13 @@ import { useUser } from "../../context/UserProvider";
 
 const SignOut = () => {
   const navigate = useNavigate();
-  const { getOut } = useUser();
+  const { getOut, isLoading } = useUser();
 
-  getOut().then(
-    useEffect(() => {
-      navigate("/");
-    }, [navigate])
-  );
+  getOut();
+
+  useEffect(() => {
+    navigate("/");
+  }, [navigate]);
 
   return <h2>Sign Out and redirect to ./index.jsx</h2>;
 };

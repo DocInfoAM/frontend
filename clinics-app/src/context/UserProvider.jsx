@@ -84,6 +84,13 @@ export const UserProvider = ({ children }) => {
   };
 
   const getOut = async () => {
+    setUser((oldValue) => {
+      return {
+        ...oldValue,
+        isLoading: true,
+      };
+    });
+
     const paramsReqForDeleteToken = {
       method: "GET",
       headers: {
