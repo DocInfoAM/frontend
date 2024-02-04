@@ -1,16 +1,10 @@
 import { Navigate, Outlet, useLocation } from "react-router-dom";
-import CustomAuth from './../hooks/useAuth';
+import { useUser } from "../context/UserProvider";
 
 export const PrivateRoute = () => {
+  const { id } = useUser();
 
-  const { isAuthenticated } = CustomAuth()
+  const location = useLocation();
 
-  const location = useLocation()
-
-  return (
-    isAuthenticated === true ?
-      <Outlet />
-      :
-      <Navigate to="/" state={{ from: location }} replace />
-  )
+  return id !== "" ? <Outlet /> : <Navigate to="/" state={{ from: location }} replace />;
 };

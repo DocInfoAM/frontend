@@ -1,6 +1,6 @@
 import styles from "./Navigation.module.css";
 import { NavLink } from "react-router-dom";
-import CustomAuth from "../../../hooks/useAuth";
+import { useUser } from "../../../context/UserProvider";
 
 const Navigation = () => {
   return (
@@ -11,11 +11,11 @@ const Navigation = () => {
 };
 
 const NavItem = () => {
-  const { isAuthenticated } = CustomAuth();
+  const { id } = useUser();
 
   return (
     <>
-      {isAuthenticated ? (
+      {id ? (
         <>
           <NavLink to="/my-clinic" id="MyClinic" className={setActive}>
             <div className={styles.item}>Моя клиника</div>

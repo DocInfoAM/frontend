@@ -1,34 +1,103 @@
-export const clinicID = 0;
+import { useLocation, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
-const getClinics = async () => {
-  const res = await fetch("https://mock-server-docinfo.onrender.com/clinics");
-  return await res.json();
-};
+export const userData = {};
 
-export const getDoctors = async () => {
-  const res = await fetch("https://mock-server-docinfo.onrender.com/doctors");
-  return await res.json();
-};
+export async function getUserDataFromServer() {
+  getUserToken();
+}
 
-const registerNewUser = async () => {
-  const res = await fetch("https://docinfoam-mvp-dev-server.vercel.app/api/auth/register");
-  return await res.json();
-};
+async function getUserToken() {
+  const userEmail = document.forms.login.login.value;
+  const userPassword = document.forms.login.password.value;
+  const paramsGetUserToken = {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      email: userEmail,
+      password: userPassword,
+    }),
+  };
 
-const getClinicSchedule = async () => {
-  const res = await fetch("https://mock-server-docinfo.onrender.com/clinicsreviews");
-  return await res.json();
-};
+  const tokenFromServer = await fetch("https://docinfoam-mvp-dev-server.vercel.app/api/auth/login", paramsGetUserToken)
+    .then(function (res) {
+      return res.json();
+    })
+    .then(function (data) {
+      userData.token = data.accessToken; // получаем ответ сервера и записываем токен
+      if (data.accessToken) {
+        getUserData(); // вызываем данные по пользователю
+      }
+    })
+    .catch(function (error) {
+      console.error("Ошибка:", error);
+      return;
+    });
+}
 
-const getDoctorsSchedule = async () => {
-  const res = await fetch("https://mock-server-docinfo.onrender.com/doctorsreviews");
-  return await res.json();
-};
+async function getUserData() {
+  const userEmail = document.forms.login.login.value;
+  const paramsGetUserData = {
+    method: "GET",
+    headers: {
+      "Content-type": "application/json",
+    },
+  };
 
-const getRequests = async () => {
-  const res = await fetch("https://mock-server-docinfo.onrender.com/requests");
-  return await res.json();
-};
+  const userInformation = await fetch(
+    `https://docinfoam-mvp-dev-server.vercel.app/api/user/${userEmail}`,
+    paramsGetUserData
+  )
+    .then(function (res) {
+      return res.json();
+    })
+    .then(function (data) {
+      userData.id = data.id;
+      userData.email = data.email;
+      userData.phone = data.phone;
+      userData.roles = data.roles;
+
+      console.log(userData);
+    })
+    .catch(function (error) {
+      console.error("Ошибка:", error);
+    });
+}
+
+// Old server and data:
+// export const clinicID = 0;
+
+// const getClinics = async () => {
+//   const res = await fetch("https://mock-server-docinfo.onrender.com/clinics");
+//   return await res.json();
+// };
+
+// export const getDoctors = async () => {
+//   const res = await fetch("https://mock-server-docinfo.onrender.com/doctors");
+//   return await res.json();
+// };
+
+// const registerNewUser = async () => {
+//   const res = await fetch("https://docinfoam-mvp-dev-server.vercel.app/api/auth/register");
+//   return await res.json();
+// };
+
+// const getClinicSchedule = async () => {
+//   const res = await fetch("https://mock-server-docinfo.onrender.com/clinicsreviews");
+//   return await res.json();
+// };
+
+// const getDoctorsSchedule = async () => {
+//   const res = await fetch("https://mock-server-docinfo.onrender.com/doctorsreviews");
+//   return await res.json();
+// };
+
+// const getRequests = async () => {
+//   const res = await fetch("https://mock-server-docinfo.onrender.com/requests");
+//   return await res.json();
+// };
 
 // export const doctorsSchedule = await getDoctorsSchedule();
 // export const clinicSchedule = await getClinicSchedule();
