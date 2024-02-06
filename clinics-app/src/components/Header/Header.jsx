@@ -7,20 +7,22 @@ const Header = () => {
   const navigate = useNavigate();
   return (
     <header className={styles.header}>
-      <div className={styles.div_header_img}>
-        <img
-          id="logo"
-          alt="logo"
-          title="logo"
-          style={{ width: 60, cursor: "pointer" }}
-          src="./img/patient-clipart-patient-identification-19.png"
-          onClick={() => {
-            navigate("/my-clinic");
-          }}
-        />
-        {/* <div className={styles.checkbox_block}></div> */}
-      </div>
-
+      <a
+        onClick={() => {
+          navigate("/my-clinic");
+        }}
+      >
+        <div className={styles.div_header_img}>
+          <img
+            id="logo"
+            alt="logo"
+            title="logo"
+            style={{ width: 60, cursor: "pointer" }}
+            src="./img/patient-clipart-patient-identification-19.png"
+          />
+          <h1 className={styles.logo_text}>DocInfo</h1>
+        </div>
+      </a>
       <Navigation />
       <ChangeLanguages />
     </header>
