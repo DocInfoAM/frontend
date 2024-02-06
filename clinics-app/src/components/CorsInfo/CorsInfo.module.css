@@ -1,0 +1,27 @@
+.loginButton {
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #f2fefe;
+  margin-top: 30px;
+  border: 0px solid;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 16px 0px rgba(181, 181, 181, 0.5);
+  -moz-box-shadow: 0px 1px 16px 0px rgba(181, 181, 181, 0.5);
+  box-shadow: 0px 1px 16px 0px rgba(181, 181, 181, 0.5);
+}
+
+.cors_block {
+  width: 300px;
+  margin: 40px auto 0 auto;
+}
+
+.links_flex {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 40px;
+}
