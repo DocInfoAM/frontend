@@ -9,13 +9,21 @@ function App() {
   const { isLoading } = useUser()
 
   return (
-    <div className="app-wrapper">
-      <Header />
-      <div className="content">
-        {isLoading ? <Loading /> : <CustomRoutes />}
+    <>
+      <input class="checkbox" type="checkbox" name="" id="checkbox" />
+      <div class="hamburger_lines">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
       </div>
-      {/* <Footer /> */}
-    </div>
+      <div className="app-wrapper">
+        <Header />
+        <div className="content">
+          {isLoading ? <Loading /> : <CustomRoutes />}
+        </div>
+        {/* <Footer /> */}
+      </div>
+    </>
   );
 }
 
