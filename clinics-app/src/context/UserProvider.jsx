@@ -41,7 +41,7 @@ export const UserProvider = ({ children }) => {
 
     const tokenFromServer = await axios
       .post(
-        "https://docinfoam-mvp-server.vercel.app/api/auth/login",
+        "https://docinfoam-mvp-dev-server.vercel.app/api/auth/login",
         { email: email, password: pass },
         { withCredentials: true }
       )
@@ -77,7 +77,7 @@ export const UserProvider = ({ children }) => {
     // };
 
     const userInformation = await axios
-      .get(`https://docinfoam-mvp-server.vercel.app/api/user/${email}`, { withCredentials: true })
+      .get(`https://docinfoam-mvp-dev-server.vercel.app/api/user/${email}`, { withCredentials: true })
       // .then(function (res) {
       //   return res.json();
       // })
@@ -142,7 +142,7 @@ export const UserProvider = ({ children }) => {
     //   });
 
     const reqForDeleteToken = await axios
-      .get("https://docinfoam-mvp-server.vercel.app/api/auth/logout", { withCredentials: true })
+      .get("https://docinfoam-mvp-dev-server.vercel.app/api/auth/logout", { withCredentials: true })
       .then(function (data) {
         console.log(data.data);
       })
