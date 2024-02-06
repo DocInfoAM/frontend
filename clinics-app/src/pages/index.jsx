@@ -10,7 +10,9 @@ const Index = (props) => {
   const [password, setPassword] = useState("123456");
 
   return (
-    <div className={styles.loginBlock}>
+    <div className={styles.login_block}>
+      <h2>Добро пожаловать!</h2>
+      <p>Выполните вход.</p>
       <form name="login">
         <input
           className={styles.login_input}

@@ -5,8 +5,9 @@ import GetClinicData from "../../components/GetClinicData/GetClinicData";
 const MyClinic = (props) => {
   return (
     <div>
+      <h2>Данные пользователя</h2>
       <GetClinicData />
-      <div>
+      {/* <div>
         <h3>Ссылки</h3>
         <p>
           <Link to="/statistics">Статистика по клинике</Link>
@@ -14,7 +15,7 @@ const MyClinic = (props) => {
         <p>
           <Link to="/account-balance">Баланс клиники</Link>
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

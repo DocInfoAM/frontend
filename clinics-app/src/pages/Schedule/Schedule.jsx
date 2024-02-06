@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const Schedule = () => {
   return (
     <div>
-      <h2>Schedule</h2>
-      <p>
+      <h2>Расписание</h2>
+      {/* <p>
         <Link to="/edit-schedule">Редактировать моё расписание</Link>
       </p>
       <p>
@@ -25,7 +25,7 @@ const Schedule = () => {
         возможностью редактировать расписание вне зависимости от роли
       </p>
       <br />
-      <br />
+      <br /> */}
     </div>
   );
 };
