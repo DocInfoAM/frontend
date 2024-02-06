@@ -10,11 +10,11 @@ function App() {
 
   return (
     <>
-      <input class="checkbox" type="checkbox" name="" id="checkbox" />
-      <div class="hamburger_lines">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
+      <input className="checkbox" type="checkbox" name="" id="checkbox" />
+      <div className="hamburger_lines">
+        <span className="line line1"></span>
+        <span className="line line2"></span>
+        <span className="line line3"></span>
       </div>
       <div className="app-wrapper">
         <Header />

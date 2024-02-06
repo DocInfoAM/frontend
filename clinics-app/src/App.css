@@ -17,7 +17,7 @@ a {
 .content {
   max-width: 1280px;
   /* width: 95vw; */
-  width: calc(100vw - 350px);
+  width: calc(100vw - 250px);
   min-height: 55vh;
   margin: 0px auto;
   /* margin-top: 120px; */
@@ -31,11 +31,11 @@ a {
   position: absolute;
   left: 5px;
   top: 10px;
-  margin: 5px;
+  /* margin: 5px; */
   display: none;
-  float: right;
-  width: 30px;
-  height: 30px;
+  /* float: right; */
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   z-index: 5;
   opacity: 0;
@@ -66,17 +66,39 @@ a {
   margin-bottom: 2px;
 }
 
+.line1 {
+  transform-origin: 20% 20%;
+  transition: transform 0.2s ease;
+}
+
+.line3 {
+  transform-origin: 5% 50%;
+  transition: transform 0.2s ease;
+}
+
+#checkbox:checked {
+  left: 190px;
+}
+
 #checkbox:checked ~ .app-wrapper {
   /* transform: translateX(0); */
   margin-left: 0px;
 }
 
-#checkbox:checked {
-  left: 250px;
+#checkbox:checked ~ .hamburger_lines {
+  left: 200px;
 }
 
-#checkbox:checked ~ .hamburger_lines {
-  left: 250px;
+#checkbox:checked ~ .hamburger_lines .line1 {
+  transform: rotate(45deg);
+}
+
+#checkbox:checked ~ .hamburger_lines .line2 {
+  transform: scaleY(0);
+}
+
+#checkbox:checked ~ .hamburger_lines .line3 {
+  transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 860px) {
@@ -88,8 +110,8 @@ a {
   }
   .content {
     width: 100vw;
-    margin-left: -50px;
-    padding: 20px 10px 10px 40px;
+    /* margin-left: -50px; */
+    padding: 10px;
   }
   .checkbox,
   .hamburger_lines {

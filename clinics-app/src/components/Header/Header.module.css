@@ -1,5 +1,5 @@
 .header {
-  width: 300px;
+  width: 250px;
   height: 100vh;
   background-color: #f2fefe;
   /* max-width: 1280px;
@@ -33,9 +33,17 @@
   padding: 20px;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .checkbox_block {
   width: 40px;
+}
+
+.logo_text {
+  padding: 13px 0 0 10px;
+  font-size: 24px;
+  font-weight: 100;
+  cursor: pointer;
+  margin: 0;
 }

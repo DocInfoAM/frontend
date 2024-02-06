@@ -8,7 +8,7 @@
 }
 
 .test_block {
-  max-width: 90%;
+  /* max-width: 90%; */
   border-radius: 30px;
   margin: 10px auto;
   padding: 10px;
