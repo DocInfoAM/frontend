@@ -30,12 +30,12 @@ export const UserProvider = ({ children }) => {
       method: "POST",
       headers: {
         "Content-type": "application/json",
-        credentials: "include",
       },
       body: JSON.stringify({
         email: email,
         password: pass,
       }),
+      credentials: "include",
     };
 
     const tokenFromServer = await fetch("https://docinfoam-mvp-server.vercel.app/api/auth/login", paramsGetUserToken)
@@ -54,8 +54,8 @@ export const UserProvider = ({ children }) => {
       method: "GET",
       headers: {
         "Content-type": "application/json",
-        credentials: "include",
       },
+      credentials: "include",
     };
 
     const userInformation = await fetch(`https://docinfoam-mvp-server.vercel.app/api/user/${email}`, paramsGetUserData)
@@ -91,8 +91,8 @@ export const UserProvider = ({ children }) => {
       method: "GET",
       headers: {
         "Content-type": "application/json",
-        credentials: "include",
       },
+      credentials: "include",
     };
 
     const req = await fetch("https://docinfoam-mvp-server.vercel.app/api/auth/logout", paramsReqForDeleteToken)
