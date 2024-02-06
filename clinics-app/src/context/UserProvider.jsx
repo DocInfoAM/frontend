@@ -37,10 +37,7 @@ export const UserProvider = ({ children }) => {
       }),
     };
 
-    const tokenFromServer = await fetch(
-      "https://docinfoam-mvp-dev-server.vercel.app/api/auth/login",
-      paramsGetUserToken
-    )
+    const tokenFromServer = await fetch("https://docinfoam-mvp-server.vercel.app/api/auth/login", paramsGetUserToken)
       .then(function (res) {
         return res.json();
       })
@@ -59,10 +56,7 @@ export const UserProvider = ({ children }) => {
       },
     };
 
-    const userInformation = await fetch(
-      `https://docinfoam-mvp-dev-server.vercel.app/api/user/${email}`,
-      paramsGetUserData
-    )
+    const userInformation = await fetch(`https://docinfoam-mvp-server.vercel.app/api/user/${email}`, paramsGetUserData)
       .then(function (res) {
         return res.json();
       })
@@ -98,7 +92,7 @@ export const UserProvider = ({ children }) => {
       },
     };
 
-    const req = await fetch("https://docinfoam-mvp-dev-server.vercel.app/api/auth/logout", paramsReqForDeleteToken)
+    const req = await fetch("https://docinfoam-mvp-server.vercel.app/api/auth/logout", paramsReqForDeleteToken)
       .then(function (res) {
         return res.json();
       })
