@@ -12,7 +12,6 @@ const Index = (props) => {
   return (
     <div className={styles.login_block}>
       <h2>Добро пожаловать!</h2>
-      <p>Выполните вход.</p>
       <form name="login">
         <input
           className={styles.login_input}
