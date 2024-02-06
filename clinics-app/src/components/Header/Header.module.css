@@ -1,5 +1,8 @@
 .header {
-    max-width: 1280px;
+  width: 300px;
+  height: 100vh;
+  background-color: #f2fefe;
+  /* max-width: 1280px;
     width: 95vw;
     margin: 0px auto;
     display: grid;
@@ -17,15 +20,15 @@
     left: 50%;
     transform: translateX(-50%);
     box-sizing: border-box;
-    background-color: #f2fefe;
+    background-color: #f2fefe; */
 }
 
 .header > * {
-    align-self: center;
+  align-self: center;
 }
 
 .div_header_img {
-    width: fit-content;
-    grid-area: div-for-header-img;
-    padding: 10px;
+  width: fit-content;
+  grid-area: div-for-header-img;
+  padding: 20px;
 }

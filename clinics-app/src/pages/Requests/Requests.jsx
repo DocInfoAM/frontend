@@ -4,8 +4,9 @@ import GetRequests from "../../components/GetRequests/GetRequests";
 const Requests = (props) => {
   return (
     <div>
-      <GetRequests />
-      <br />
+      <h2>Заявки</h2>
+      {/* <GetRequests /> */}
+      {/* <br />
       <br />
       <h2>Ссылки:</h2>
       <p>
@@ -13,7 +14,7 @@ const Requests = (props) => {
       </p>
       <p>
         <Link to="/my-clinic">Страница моей клиники</Link>
-      </p>
+      </p> */}
     </div>
   );
 };

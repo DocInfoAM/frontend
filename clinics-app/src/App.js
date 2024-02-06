@@ -14,7 +14,7 @@ function App() {
       <div className="content">
         {isLoading ? <Loading /> : <CustomRoutes />}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
