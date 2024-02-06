@@ -40,7 +40,17 @@ export const UserProvider = ({ children }) => {
     // };
 
     const tokenFromServer = await axios
-      .post("https://docinfoam-mvp-server.vercel.app/api/auth/login", { email: email, password: pass })
+      .post(
+        "https://docinfoam-mvp-server.vercel.app/api/auth/login",
+        { email: email, password: pass },
+        {
+          headers: {
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "cross-site",
+          },
+        }
+      )
       // .then(function (res) {
       //   return res.json();
       // })
@@ -73,7 +83,13 @@ export const UserProvider = ({ children }) => {
     // };
 
     const userInformation = await axios
-      .get(`https://docinfoam-mvp-server.vercel.app/api/user/${email}`)
+      .get(`https://docinfoam-mvp-server.vercel.app/api/user/${email}`, {
+        headers: {
+          "Sec-Fetch-Dest": "empty",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "cross-site",
+        },
+      })
       // .then(function (res) {
       //   return res.json();
       // })
@@ -138,7 +154,13 @@ export const UserProvider = ({ children }) => {
     //   });
 
     const reqForDeleteToken = await axios
-      .get("https://docinfoam-mvp-server.vercel.app/api/auth/logout")
+      .get("https://docinfoam-mvp-server.vercel.app/api/auth/logout", {
+        headers: {
+          "Sec-Fetch-Dest": "empty",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "cross-site",
+        },
+      })
       .then(function (data) {
         console.log(data.data);
       })
