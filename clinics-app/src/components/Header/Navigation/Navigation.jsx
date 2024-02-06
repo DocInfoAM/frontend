@@ -17,7 +17,7 @@ const NavItem = () => {
   return (
     <>
       {id ? (
-        <>
+        <div className={styles.menu_flex}>
           <NavLink to="/my-clinic" id="MyClinic" className={setActive}>
             <div className={styles.item}>Моя клиника</div>
           </NavLink>
@@ -39,9 +39,9 @@ const NavItem = () => {
           <NavLink to="/" id="SignOut" className={setActive} onClick={getOut}>
             <div className={styles.item}>Выход</div>
           </NavLink>
-        </>
+        </div>
       ) : (
-        "Добро пожаловать, выполните вход!"
+        ""
       )}
     </>
   );

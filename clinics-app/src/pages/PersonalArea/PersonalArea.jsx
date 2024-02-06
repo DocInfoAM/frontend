@@ -1,8 +1,7 @@
-
 const PersonalArea = () => {
   return (
     <div>
-      <h2>Personal Area</h2>
+      <h2>Личные данные</h2>
     </div>
   );
 };
