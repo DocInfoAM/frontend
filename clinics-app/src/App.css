@@ -67,7 +67,8 @@ a {
 }
 
 #checkbox:checked ~ .app-wrapper {
-  transform: translateX(0);
+  /* transform: translateX(0); */
+  margin-left: 0px;
 }
 
 #checkbox:checked {
@@ -81,8 +82,8 @@ a {
 @media screen and (max-width: 860px) {
   .app-wrapper {
     width: calc(100vw + 250px);
-    /* margin-left: -250px; */
-    transform: translateX(-250px);
+    margin-left: -250px;
+    /* transform: translateX(-250px); */
     position: relative;
   }
   .content {
