@@ -87,7 +87,9 @@ a {
     position: relative;
   }
   .content {
-    width: calc(100vw - 50px);
+    width: 100vw;
+    margin-left: -50px;
+    padding: 20px 10px 10px 40px;
   }
   .checkbox,
   .hamburger_lines {
