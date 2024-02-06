@@ -15,3 +15,16 @@
   color: rgb(0, 48, 102);
   text-decoration: underline;
 }
+
+.loginButton {
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #f2fefe;
+  margin-top: 30px;
+  border: 0px solid;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 16px 0px rgba(181, 181, 181, 0.5);
+  -moz-box-shadow: 0px 1px 16px 0px rgba(181, 181, 181, 0.5);
+  box-shadow: 0px 1px 16px 0px rgba(181, 181, 181, 0.5);
+}
