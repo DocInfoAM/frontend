@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import axios from "axios";
 
 const initialValue = {
   id: "",
@@ -26,50 +27,79 @@ export const UserProvider = ({ children }) => {
       };
     });
 
-    const paramsGetUserToken = {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        password: pass,
-      }),
-      credentials: "include",
-    };
+    // const paramsGetUserToken = {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     email: email,
+    //     password: pass,
+    //   }),
+    //   credentials: "include",
+    // };
 
-    const tokenFromServer = await fetch("https://docinfoam-mvp-server.vercel.app/api/auth/login", paramsGetUserToken)
-      .then(function (res) {
-        return res.json();
-      })
+    const tokenFromServer = await axios
+      .post("https://docinfoam-mvp-server.vercel.app/api/auth/login", { email: email, password: pass })
+      // .then(function (res) {
+      //   return res.json();
+      // })
       .then(function (data) {
-        console.log(data);
+        console.log(data.data);
       })
       .catch(function (error) {
         console.error("Ошибка:", error);
         return;
       });
 
-    const paramsGetUserData = {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-      },
-      credentials: "include",
-    };
+    // const tokenFromServer = await fetch("https://docinfoam-mvp-server.vercel.app/api/auth/login", paramsGetUserToken)
+    //   .then(function (res) {
+    //     return res.json();
+    //   })
+    //   .then(function (data) {
+    //     console.log(data);
+    //   })
+    //   .catch(function (error) {
+    //     console.error("Ошибка:", error);
+    //     return;
+    //   });
 
-    const userInformation = await fetch(`https://docinfoam-mvp-server.vercel.app/api/user/${email}`, paramsGetUserData)
-      .then(function (res) {
-        return res.json();
-      })
+    // const paramsGetUserData = {
+    //   method: "GET",
+    //   headers: {
+    //     "Content-type": "application/json",
+    //   },
+    //   credentials: "include",
+    // };
+
+    const userInformation = await axios
+      .get(`https://docinfoam-mvp-server.vercel.app/api/user/${email}`)
+      // .then(function (res) {
+      //   return res.json();
+      // })
       .then(function (data) {
-        console.log(data);
+        console.log(data.data);
+        data = data.data;
         setUser({ id: data.id, email: data.email, roles: data.roles, phone: data.phone });
         navigate(from, { replace: true }); // делаем переадресацию на приватную страницу
       })
       .catch(function (error) {
         console.error("Ошибка:", error);
+        return;
       });
+
+    // const userInformation = await fetch(`https://docinfoam-mvp-server.vercel.app/api/user/${email}`, paramsGetUserData)
+    //   .then(function (res) {
+    //     return res.json();
+    //   })
+    //   .then(function (data) {
+    //     console.log(data);
+    //     setUser({ id: data.id, email: data.email, roles: data.roles, phone: data.phone });
+    //     navigate(from, { replace: true }); // делаем переадресацию на приватную страницу
+    //   })
+    //   .catch(function (error) {
+    //     console.error("Ошибка:", error);
+    //   });
 
     setUser((oldValue) => {
       return {
@@ -87,20 +117,30 @@ export const UserProvider = ({ children }) => {
       };
     });
 
-    const paramsReqForDeleteToken = {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-      },
-      credentials: "include",
-    };
+    // const paramsReqForDeleteToken = {
+    //   method: "GET",
+    //   headers: {
+    //     "Content-type": "application/json",
+    //   },
+    //   credentials: "include",
+    // };
 
-    const req = await fetch("https://docinfoam-mvp-server.vercel.app/api/auth/logout", paramsReqForDeleteToken)
-      .then(function (res) {
-        return res.json();
-      })
+    // const req = await fetch("https://docinfoam-mvp-server.vercel.app/api/auth/logout", paramsReqForDeleteToken)
+    //   .then(function (res) {
+    //     return res.json();
+    //   })
+    //   .then(function (data) {
+    //     console.log(data);
+    //   })
+    //   .catch(function (error) {
+    //     console.error("Ошибка:", error);
+    //     return;
+    //   });
+
+    const reqForDeleteToken = await axios
+      .get("https://docinfoam-mvp-server.vercel.app/api/auth/logout")
       .then(function (data) {
-        console.log(data);
+        console.log(data.data);
       })
       .catch(function (error) {
         console.error("Ошибка:", error);
