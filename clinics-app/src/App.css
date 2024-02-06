@@ -26,10 +26,15 @@ a {
 @media screen and (max-width: 860px) {
   .app-wrapper {
     width: calc(100vw + 250px);
-    margin-left: -250px;
+    /* margin-left: -250px; */
+    transform: translateX(-250px);
     position: relative;
   }
   .content {
     width: calc(100vw - 50px);
+  }
+  .checkbox,
+  .hamburger_lines {
+    display: block;
   }
 }

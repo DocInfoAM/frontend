@@ -18,7 +18,9 @@ const Header = () => {
             navigate("/my-clinic");
           }}
         />
+        {/* <div className={styles.checkbox_block}></div> */}
       </div>
+
       <Navigation />
       <ChangeLanguages />
     </header>
