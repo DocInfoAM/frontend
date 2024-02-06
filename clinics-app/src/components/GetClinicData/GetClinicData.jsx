@@ -36,18 +36,18 @@ const GetClinicData = (props) => {
             <p>
               My roles:{" "}
               {roles.map((el) => (
-                <span key={el}>{el}</span>
+                <Roles el={el} key={el} />
               ))}
             </p>
           </div>
         </div>
       </div>
-      {/* <div className={styles.second__block}></div>
-      <div>
-        <h4 className={styles.h4__left}>Отзывы:</h4>
-      </div> */}
     </div>
   );
+};
+
+const Roles = ({ el }) => {
+  return <span>{el}</span>;
 };
 
 export default GetClinicData;

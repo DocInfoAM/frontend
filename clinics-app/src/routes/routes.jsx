@@ -6,7 +6,6 @@ import Schedule from "../pages/Schedule/Schedule";
 import PersonalArea from "../pages/PersonalArea/PersonalArea";
 import AllDoctors from "../pages/AllDoctors/AllDoctors";
 import Contacts from "../pages/Contacts/Contacts";
-import SignOut from "../pages/SignOut/SignOut";
 import Index from "../pages/index";
 import NotFoundPage from "../pages/404";
 import TermsOfUse from "../pages/TermsOfUse/TermsOfUse";
@@ -15,8 +14,11 @@ import EditSchedule from "../pages/EditSchedule/EditSchedule";
 import Statistics from "../pages/Statistics/Statistics";
 import TopUpAccountBalance from "../pages/TopUpAccountBalance/TopUpAccountBalance";
 import AccountBalance from "../pages/AccountBalance/AccountBalance";
+import { useUser } from "../context/UserProvider";
 
 export const CustomRoutes = (props) => {
+  const { getOut } = useUser();
+
   return (
     <Routes>
       <Route exact path="/" element={<Index />} />
@@ -33,7 +35,6 @@ export const CustomRoutes = (props) => {
         <Route path="/personal-area" element={<PersonalArea />} />
       </Route>
       <Route path="/terms-of-use" element={<TermsOfUse />} />
-      <Route path="/sign-out" element={<SignOut />} />
       <Route path="*" element={<NotFoundPage />} />
       <Route path="/password-recovery" element={<PasswordRecovery />} />
     </Routes>
