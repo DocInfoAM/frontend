@@ -16,7 +16,6 @@ export const UserProvider = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/my-clinic";
-
   const [user, setUser] = useState({ ...initialValue });
 
   const authUser = async (email, pass) => {
@@ -84,9 +83,9 @@ export const UserProvider = ({ children }) => {
   };
 
   const getOut = async () => {
-    setUser((oldValue) => {
+    setUser(() => {
       return {
-        ...oldValue,
+        ...initialValue,
         isLoading: true,
       };
     });
@@ -110,7 +109,7 @@ export const UserProvider = ({ children }) => {
         return;
       });
 
-    setUser((oldValue) => {
+    setUser(() => {
       return {
         ...initialValue,
       };

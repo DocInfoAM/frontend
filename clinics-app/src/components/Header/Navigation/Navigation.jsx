@@ -12,6 +12,7 @@ const Navigation = () => {
 
 const NavItem = () => {
   const { id } = useUser();
+  const { getOut } = useUser();
 
   return (
     <>
@@ -35,7 +36,7 @@ const NavItem = () => {
           <NavLink to="/contacts" id="Contacts" className={setActive}>
             <div className={styles.item}>Контакты</div>
           </NavLink>
-          <NavLink to="/sign-out" id="SignOut" className={setActive}>
+          <NavLink to="/" id="SignOut" className={setActive} onClick={getOut}>
             <div className={styles.item}>Выход</div>
           </NavLink>
         </>
