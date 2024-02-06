@@ -62,16 +62,13 @@ const Index = (props) => {
             target="_blank"
           >
             <div>
-              <img
-                className={styles.logo}
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1200px-Google_Chrome_icon_%28February_2022%29.svg.png"
-              />
+              <img className={styles.logo} src="https://www.infotrucs.fr/wp-content/uploads/2018/10/chrome.png" />
               <p>Chrome</p>
             </div>
           </a>
           <a href="https://addons.mozilla.org/en-US/firefox/addon/access-control-allow-origin/" target="_blank">
             <div>
-              <img className={styles.logo} src="https://blog.mozilla.org/opendesign/files/2018/07/firefox-logo.png" />
+              <img className={styles.logo} src="https://garant-service.tv/chaykovskiy-tv/firefox_PNG6.png" />
               <p>Mozilla FireFox</p>
             </div>
           </a>
