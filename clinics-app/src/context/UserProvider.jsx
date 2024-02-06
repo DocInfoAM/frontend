@@ -30,6 +30,7 @@ export const UserProvider = ({ children }) => {
       method: "POST",
       headers: {
         "Content-type": "application/json",
+        credentials: "include",
       },
       body: JSON.stringify({
         email: email,
@@ -53,6 +54,7 @@ export const UserProvider = ({ children }) => {
       method: "GET",
       headers: {
         "Content-type": "application/json",
+        credentials: "include",
       },
     };
 
@@ -89,6 +91,7 @@ export const UserProvider = ({ children }) => {
       method: "GET",
       headers: {
         "Content-type": "application/json",
+        credentials: "include",
       },
     };
 
