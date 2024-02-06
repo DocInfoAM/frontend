@@ -67,6 +67,7 @@ export const UserProvider = ({ children }) => {
         return res.json();
       })
       .then(function (data) {
+        console.log(data);
         setUser({ id: data.id, email: data.email, roles: data.roles, phone: data.phone });
         navigate(from, { replace: true }); // делаем переадресацию на приватную страницу
       })
