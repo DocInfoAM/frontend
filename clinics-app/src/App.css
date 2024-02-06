@@ -1,3 +1,7 @@
+#root {
+  overflow-x: hidden;
+}
+
 a {
   color: rgb(30, 30, 30);
   font-weight: 400;
