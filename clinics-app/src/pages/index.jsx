@@ -55,7 +55,7 @@ const Index = (props) => {
       >
         Вход
       </button>
-      <CorsInfo />
+      {/* <CorsInfo /> */}
     </div>
   );
 };
