@@ -1,7 +1,21 @@
 import { createContext, useContext, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
+import SecureLS from "secure-ls";
 
+// Функции для работы с токенами
+const ls = new SecureLS();
+export const saveTokenToLocalStorage = (token) => {
+  ls.set("token", token);
+};
+export const getTokenFromLocalStorage = () => {
+  return ls.get("token");
+};
+export const clearTokenFromLocalStorage = () => {
+  ls.remove("token");
+};
+
+// Описание данных для контекста
 const initialValue = {
   id: "",
   email: "",
@@ -45,11 +59,9 @@ export const UserProvider = ({ children }) => {
         { email: email, password: pass },
         { withCredentials: true }
       )
-      // .then(function (res) {
-      //   return res.json();
-      // })
-      .then(function (data) {
-        console.log(data.data);
+      .then(function (token) {
+        saveTokenToLocalStorage(token.data.accessToken);
+        console.log(ls.get("token"));
       })
       .catch(function (error) {
         console.error("Ошибка:", error);
@@ -78,11 +90,7 @@ export const UserProvider = ({ children }) => {
 
     const userInformation = await axios
       .get(`https://docinfoam-mvp-dev-server.vercel.app/api/user/${email}`, { withCredentials: true })
-      // .then(function (res) {
-      //   return res.json();
-      // })
       .then(function (data) {
-        console.log(data.data);
         data = data.data;
         setUser({ id: data.id, email: data.email, roles: data.roles, phone: data.phone });
         navigate(from, { replace: true }); // делаем переадресацию на приватную страницу

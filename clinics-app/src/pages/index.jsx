@@ -1,7 +1,6 @@
 import styles from "./index.module.css";
 import React, { useState, useEffect } from "react";
 import { useUser } from "../context/UserProvider";
-import { CorsInfo } from "../components/CorsInfo/CorsInfo";
 
 const Index = (props) => {
   const { authUser } = useUser();
@@ -55,7 +54,6 @@ const Index = (props) => {
       >
         Вход
       </button>
-      {/* <CorsInfo /> */}
     </div>
   );
 };
